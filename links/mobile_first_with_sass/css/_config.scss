@@ -1,0 +1,35 @@
+// ---color variables---
+$color-1: #181818;
+$color-2: #f4f4f4;
+
+$gray-1: #333;
+$gray-2: #616161;
+$gray-3: #909090;
+$gray-4: #ccc;
+$gray-5: #f4f4f4;
+
+$white: #fff;
+
+@mixin primary-opacity {
+  opacity: 0.6;
+}
+
+@mixin primary-transition {
+  transition: all 0.4s ease;
+}
+
+@mixin box-shadow-1 {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+// For Media Queries
+@mixin md-screen {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg-screen {
+  @media (min-width: 900px) {
+    @content;
+  }
+}

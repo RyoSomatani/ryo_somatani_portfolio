@@ -1,0 +1,467 @@
+@import "config";
+@import "utilities";
+@import "global";
+
+body {
+  font-family: serif;
+  background: $gray-5;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  background: $color-1;
+  max-width: 1000px;
+  margin: auto;
+  @include box-shadow-2;
+}
+
+.active {
+  color: $color-3;
+}
+
+.color-highlight {
+  color: $color-3;
+}
+
+header {
+  height: 100px;
+}
+
+section.contact {
+  height: calc(100vh - 100px - 80px - 2rem);
+}
+
+header .container-80 {
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+
+  .title {
+    h1,
+    h2 {
+      font-weight: 500;
+    }
+  }
+
+  nav {
+    text-align: center;
+    align-self: center;
+
+    ul {
+      display: flex;
+      width: 60%;
+      justify-content: space-between;
+      margin: auto;
+
+      .nav-link {
+        padding-bottom: 1rem;
+        transition: border 0.5s ease;
+
+        &:hover,
+        &:focus {
+          color: $color-3;
+        }
+
+        &.active {
+          border-bottom: 2px solid $color-3;
+        }
+      }
+
+      &.show {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .hamburger-menu {
+    height: 18px;
+    width: 25px;
+    display: flex;
+    justify-self: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    visibility: hidden;
+    @include secondary-transition;
+    &.show {
+      transform: rotate(360deg);
+
+      .hamburger-bar {
+        &:first-child {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translate(6px, -5px);
+        }
+      }
+    }
+
+    .hamburger-bar {
+      height: 3px;
+      width: 100%;
+      background: $color-2;
+      @include main-transition;
+    }
+  }
+}
+
+#intro {
+  margin-top: 3rem;
+}
+
+// PROJECT SECTION
+.projects {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+
+  .container-90 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    .project {
+      position: relative;
+      min-height: 300px;
+      min-width: 400px;
+
+      .project-link {
+        height: 100%;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .hover-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color-1, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      @include main-transition;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        @include box-shadow-1;
+      }
+
+      .project-icon-container {
+        background: rgba($color-3, 0.6);
+        color: $color-1;
+        border-radius: 50%;
+        transform: translateY(-100%);
+
+        i {
+          padding: 1.2rem;
+          font-size: 1.6rem;
+        }
+      }
+
+      .project-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45%;
+        background: rgba(0, 0, 0, 0.8);
+        color: $color-1;
+        font-size: 0.7rem;
+        padding: 1rem;
+        transform: translateX(-100%);
+        @include main-transition;
+
+        h4 {
+          padding-bottom: 8px;
+        }
+
+        &.hovered {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+#project-1 {
+  background: url("../img/1.png") no-repeat center center/cover;
+}
+
+#project-2 {
+  background: url("../img/2.png") no-repeat center center/cover;
+}
+
+#project-3 {
+  background: url("../img/3.png") no-repeat center center/cover;
+}
+
+#project-4 {
+  background: url("../img/4.png") no-repeat left center/ cover;
+}
+
+#project-5 {
+  background: url("../img/5.png") no-repeat center center/ cover;
+}
+
+#project-6 {
+  background: url("../img/6.png") no-repeat center center/ cover;
+}
+
+// ========== CONTACT PAGE ==========
+// ==================================
+.contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 600px;
+  max-width: 1000px;
+  margin: auto;
+
+  .page-title {
+    margin-bottom: 5rem;
+  }
+
+  .divider {
+    width: 2px;
+    height: 50%;
+    background: $color-3;
+    transform: rotate(20deg);
+    justify-self: center;
+  }
+
+  i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $color-3;
+  }
+
+  form {
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    textarea {
+      display: block;
+      margin: auto;
+      padding: 0.8rem;
+      font-size: 1rem;
+      width: 300px;
+      border-radius: 3px;
+      border: 1px solid $gray-1;
+    }
+
+    input[type="submit"] {
+      background: $color-3;
+      color: $color-1;
+      cursor: pointer;
+      border-color: transparent;
+      transition: all 0.4s ease;
+
+      &:hover,
+      &:focus {
+        background: $color-1;
+        color: $color-3;
+        border: 1px solid $color-3;
+      }
+    }
+
+    .recaptcha {
+      width: 300px;
+      margin: auto;
+    }
+  }
+}
+
+// FOOTER SECTION
+footer {
+  color: $gray-1;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 0;
+
+  .container-80 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .footer-icon-container {
+      .back-to-top {
+        padding: 8px 15px;
+        display: inline-block;
+        margin-left: 3rem;
+        @include secondary-transition;
+
+        &:hover {
+          background: $color-2;
+          color: $color-1;
+        }
+      }
+    }
+  }
+}
+
+//========== MEDIA QUERIES ==========
+//===================================
+
+// 920px 以下
+@include lg-screen {
+  header {
+    .container-80 {
+      nav {
+        ul {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .projects {
+    .container-90 {
+      width: 90%;
+
+      .project {
+        min-width: 200px;
+        min-height: 250px;
+
+        .project-info {
+          height: 60%;
+        }
+      }
+    }
+  }
+}
+
+// 768px 以下
+@include md-screen {
+  .wrapper {
+    width: 80%;
+    min-width: 450px;
+    @include box-shadow-3;
+  }
+
+  header {
+    .container-80 {
+      nav ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 300px;
+        background: #333;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+
+        .nav-link {
+          color: $color-1;
+          display: inline-block;
+          padding: 0;
+          margin-bottom: 2rem;
+          font-size: 1.2rem;
+
+          &:hover,
+          &:focus {
+            color: $color-3;
+          }
+
+          &.active {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .title {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+    .container-80 {
+      grid-template-columns: 4fr 1fr 1fr;
+      .hamburger-menu {
+        visibility: visible;
+      }
+    }
+  }
+
+  .projects {
+    .container-90 {
+      width: 95%;
+      grid-template-columns: 1fr;
+
+      .project {
+        width: 100%;
+        min-height: 350px;
+
+        .project-info {
+          height: 40%;
+        }
+      }
+    }
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 4rem 0;
+
+    .divider {
+      transform: rotate(90deg);
+      height: 400%;
+      justify-self: center;
+    }
+  }
+
+  footer {
+    height: 120px;
+    .container-80 {
+      grid-template-columns: 1fr;
+      text-align: center;
+      grid-gap: 1rem;
+
+      p {
+        order: 2;
+      }
+
+      .footer-icon-container {
+        order: 1;
+        justify-self: center;
+
+        .back-to-top {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

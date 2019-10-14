@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/fontawesome_css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>My Portfolio | Contact</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container"></div>
+      <!-- HEADER SECTION -->
+      <header id="page-top">
+        <div class="container-80">
+          <div class="title">
+            <h1><span class="color-highlight">My</span> Portfolio</h1>
+            <h2>Ryo Somatani</h2>
+          </div>
+
+          <nav>
+            <ul>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link ">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link active">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- HAMBURGER MENU FOR SMALL SCREENS -->
+          <div class="hamburger-menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact">
+        <div class="page-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="contact-info">
+          <div class="info mb-3">
+            <i class="fas fa-envelope"></i>
+            <h3>ryo_somatani@outlook.com</h3>
+          </div>
+
+          <form action="POST" data-netlify="true">
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                cols="20"
+                rows="5"
+                placeholder="Message.."
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <div data-netlify-recaptcha="true" class="recaptcha"></div>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="container-80">
+        <p class="copyright">&copy; Ryo Somatani - Portfolio 2019</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

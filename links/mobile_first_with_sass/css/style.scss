@@ -1,0 +1,500 @@
+@import "config";
+@import "utilities";
+@import "global";
+
+.btn {
+  padding: 10px 20px;
+  background: $color-2;
+  border: none;
+  width: 100%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 100%;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.container-90 {
+  max-width: 1000px;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $color-2;
+  width: 100%;
+  z-index: 1;
+
+  .container-90 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+
+    .branding h4 {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    nav {
+      background: $color-2;
+
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0;
+
+      width: 100%;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      transform: translateY(-200%);
+
+      ul {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .nav-item {
+          height: auto;
+
+          .nav-link {
+            display: inline-block;
+            height: 100%;
+            padding: 0;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            transition: all ease 0.4s;
+            width: 100%;
+            position: relative;
+
+            &:hover,
+            &:focus {
+              @include primary-opacity;
+              color: inherit;
+            }
+
+            // nav-link下のバー
+            &::after {
+              content: "";
+              height: 2px;
+              width: 0;
+              position: absolute;
+              background: $gray-2;
+              bottom: -3px;
+              left: 0;
+              @include primary-transition;
+            }
+
+            // nav-link下のバーのトランジション
+            &:hover:after,
+            &:focus:after {
+              content: "";
+              height: 2px;
+              width: 100%;
+              position: absolute;
+              bottom: -3px;
+              left: 0;
+              @include primary-transition;
+            }
+          }
+        }
+      }
+
+      &.show {
+        transform: translateY(0);
+      }
+    }
+
+    .hamburger {
+      height: 13px;
+      width: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 3;
+
+      .hamburger-bar {
+        background: $color-1;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow: scroll;
+}
+
+// SHOWCASE SECTION
+.showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/showcase.jpg") center center/cover no-repeat;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .container-90 {
+    color: $color-2;
+
+    #showcase-heading {
+      width: auto;
+    }
+    #auto-type {
+      position: relative;
+      height: 80px;
+      &::after {
+        content: "";
+        height: 35px;
+        width: 2px;
+        background: $color-2;
+        position: absolute;
+        margin-left: 5px;
+        transform: translateY(7px);
+        animation: autoType 0.8s linear infinite;
+      }
+    }
+
+    @keyframes autoType {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 0;
+      }
+      40% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .btn-3 {
+      background: $color-2;
+      color: $color-1;
+      margin-top: 6rem;
+      @include primary-transition;
+
+      &:hover {
+        background: darken($color-2, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// ABOUT SECTION
+.section {
+  .container-90 {
+    padding: 4rem 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-section-2 {
+  background: $gray-4;
+
+  .container-90 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+
+    div {
+      padding: 2rem;
+
+      :first-child {
+        height: 50%;
+      }
+
+      p {
+        margin: 2rem 0;
+      }
+
+      img {
+        border-radius: 5px;
+        height: 100%;
+      }
+
+      .btn:hover {
+        background: $color-1;
+        color: $color-2;
+        @include primary-transition;
+      }
+    }
+  }
+}
+
+// TEAM SECTION
+.team {
+  .members {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    .member {
+      background: $gray-5;
+
+      h5 {
+        margin: 1rem 0;
+        color: darken($gray-5, 35%);
+      }
+
+      .btn {
+        margin-top: 2rem;
+        background: $white;
+
+        &:hover,
+        &:focus {
+          background: darken($white, 10%);
+          @include primary-transition;
+        }
+      }
+
+      .member-info {
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+.our-work {
+  .all-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+
+    .work {
+      @include box-shadow-1;
+
+      &:hover {
+        opacity: 0.5;
+        @include primary-transition;
+      }
+    }
+  }
+}
+
+// SKILL SECTION
+.skills {
+  background: $gray-5;
+  .container-90 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    .section-header {
+      padding: 2rem 2rem 2rem 0;
+
+      h4 {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .skill-barcharts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .skill-barchart {
+        margin: 2rem 0;
+
+        h5 {
+          text-align: left;
+        }
+
+        .barchart-outline {
+          width: 100%;
+          background: $gray-4;
+
+          .barchart-value {
+            background: $color-1;
+            color: $color-2;
+            text-align: center;
+            transition: width 0.4s ease-in;
+
+            &.barchart-value-1 {
+              width: 0;
+
+              &.show {
+                width: 80%;
+              }
+            }
+
+            &.barchart-value-2 {
+              width: 0;
+
+              &.show {
+                width: 85%;
+              }
+            }
+
+            &.barchart-value-3 {
+              width: 0;
+
+              &.show {
+                width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// CONTACT SECTION
+.contact {
+  .contact-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 80%;
+    margin: auto;
+
+    .contact-info {
+      div {
+        margin: 2rem 0;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+
+        i {
+          font-size: 2.5rem;
+          margin-right: 20px;
+          width: 50px;
+        }
+      }
+    }
+
+    form {
+      input,
+      textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        background: $color-1;
+        color: $color-2;
+        @include primary-transition;
+
+        &:hover,
+        &:focus {
+          background: $color-2;
+          color: $color-1;
+        }
+      }
+    }
+  }
+}
+
+// FOOTER SECTION
+footer {
+  background: $color-1;
+  padding: 4rem;
+
+  .btn {
+    width: auto;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    padding-top: 2rem;
+    margin: 0;
+    color: $color-2;
+  }
+}
+
+// MEDIA QUERIES
+@include md-screen {
+  body {
+    text-align: left;
+  }
+
+  header {
+    .container-90 {
+      nav {
+        position: static;
+        width: 50%;
+        height: 100%;
+        transform: translateY(0);
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+
+  .team {
+    .members {
+      grid-template-columns: 2fr 2fr;
+    }
+  }
+}
+
+@include lg-screen {
+  .team {
+    .members {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  #showcase {
+    .btn-3 {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-height: 450px) {
+  #showcase {
+    p {
+      display: none;
+    }
+  }
+}

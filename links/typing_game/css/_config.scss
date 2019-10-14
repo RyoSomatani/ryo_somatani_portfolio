@@ -1,0 +1,60 @@
+// ---color variables---
+$color-1: #935529;
+$color-2: #f44336;
+$color-3: #ccc;
+$color-4: #fff;
+
+$gray-1: #333;
+$gray-2: #616161;
+$gray-3: #909090;
+$gray-4: #ccc;
+$gray-5: #f4f4f4;
+
+$white: #fff;
+$black: #181818;
+
+@mixin primary-transition {
+  transition: all 0.4s ease;
+}
+
+@mixin primary-box-shadow {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+// Setting a font color based on a background color
+@function set-font-color($bg-color) {
+  @if (lightness($bg-color) >50) {
+    @return #181818;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin bg-color-and-font-color($bg-color) {
+  background: $bg-color;
+  color: set-font-color($bg-color);
+}
+
+// For Media Queries
+// By default, sm: 500px, md: 768px, lg:1170, xl:1171~
+
+@mixin sm-screen-max-500px {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+@mixin md-screen-max-700px {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin lg-screen-max-1170px {
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin xl-screen-min-1171px {
+  @media (min-width: 1171px) {
+    @content;
+  }
+}

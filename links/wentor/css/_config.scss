@@ -1,0 +1,17 @@
+// ---color variables---
+$color-1: #717f86;
+$color-2: #5fcf80;
+$color-3: #fff;
+
+$grey-1: #333;
+$grey-2: #616161;
+$grey-3: #909090;
+$grey-4: #ccc;
+$grey-5: #f4f4f4;
+
+$white: #fff;
+$black: #181818;
+
+@mixin max-width {
+  max-width: 900px;
+}

@@ -1,0 +1,24 @@
+// ---color variables---
+$color-1: #f4f4f4;
+$color-2: #228896;
+$color-3: #909090;
+$color-4: #ddd;
+
+$white: #fff;
+$black: #181818;
+
+@mixin primary-letter-spacing {
+  letter-spacing: 2px;
+}
+
+@mixin primary-transition {
+  transition: all 0.3s ease;
+}
+
+@mixin secondary-transition {
+  transition: all 0.8s ease-out;
+}
+
+@mixin primary-box-shadow {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+button,
+input[type="submit"] {
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  display: block;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #909090;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
