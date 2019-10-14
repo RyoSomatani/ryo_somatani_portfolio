@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome/fontawesome_css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Star Ratings</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h3>Rate Brands</h3>
+        <form>
+          <select id="select-brand" class="form-control">
+            <option disabled selected>Select brand</option>
+            <option value="sony">Sony</option>
+            <option value="samsung">Samsung</option>
+            <option value="panasonic">Panasonic</option>
+            <option value="lg">LG</option>
+          </select>
+
+          <input
+            type="number"
+            step="0.1"
+            max="5"
+            id="change-rating"
+            placeholder="Enter 1 ~ 5"
+            disabled
+            class="form-control"
+          />
+
+          <button id="update-btn" class="btn bg-dark mt-1 mb-3">
+            アップデート
+          </button>
+        </form>
+
+        <table class="tv-ratings table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Brand</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="sony">
+              <td>Sony</td>
+              <td>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+                <span class="number-rating"></span>
+              </td>
+            </tr>
+
+            <tr class="samsung">
+              <td>Samsung</td>
+              <td>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+                <span class="number-rating"></span>
+              </td>
+            </tr>
+
+            <tr class="panasonic">
+              <td>Panasonic</td>
+              <td>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+                <span class="number-rating"></span>
+              </td>
+            </tr>
+
+            <tr class="lg">
+              <td>LG</td>
+              <td>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+                <span class="number-rating"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="ranking-table">
+        <table class="table m-0">
+          <thead class="thead-dark">
+            <tr>
+              <th>Ranking</th>
+              <th>Brand</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

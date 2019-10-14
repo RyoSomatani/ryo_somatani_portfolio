@@ -19,6 +19,19 @@ function hamburgerAnimation() {
   }
 }
 
+const title = document.querySelector(".title");
+
+window.addEventListener("scroll", () => {
+  const titlePosition = title.getBoundingClientRect().top;
+  if (titlePosition < -20) {
+    hamburger.classList.add("move");
+  } else {
+    hamburger.classList.remove("move");
+  }
+
+  // console.log(hamburgerPosition, window.innerHeight);
+});
+
 // ------ PROJECT INFO ANIMATION ------
 
 const projects = document.querySelectorAll(".hover-overlay");
@@ -28,13 +41,11 @@ projects.forEach(project => {
   project.addEventListener("mouseenter", e => {
     e.preventDefault();
     e.target.children[1].classList.add("hovered");
-    console.log(e.target.children[1].className);
   });
 
   // mouselease イベントで元にもどす
   project.addEventListener("mouseleave", e => {
     e.preventDefault();
     e.target.children[1].classList.remove("hovered");
-    console.log(e.target.children[1].className);
   });
 });

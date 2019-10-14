@@ -349,6 +349,7 @@ header .container-80 .hamburger-menu {
           justify-content: space-between;
   cursor: pointer;
   visibility: hidden;
+  z-index: 1;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -370,6 +371,12 @@ header .container-80 .hamburger-menu.show .hamburger-bar:nth-child(2) {
 header .container-80 .hamburger-menu.show .hamburger-bar:last-child {
   -webkit-transform: rotate(-45deg) translate(6px, -5px);
           transform: rotate(-45deg) translate(6px, -5px);
+}
+
+header .container-80 .hamburger-menu.move {
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
 
 header .container-80 .hamburger-menu .hamburger-bar {
@@ -640,7 +647,7 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   }
   header .container-80 nav ul {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -689,6 +696,9 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   }
   header .container-80 .hamburger-menu {
     visibility: visible;
+  }
+  .projects {
+    margin-top: 2rem;
   }
   .projects .container-90 {
     width: 95%;

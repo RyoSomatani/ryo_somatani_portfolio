@@ -84,6 +84,7 @@ header .container-80 {
     justify-content: space-between;
     cursor: pointer;
     visibility: hidden;
+    z-index: 1;
     @include secondary-transition;
     &.show {
       transform: rotate(360deg);
@@ -101,6 +102,12 @@ header .container-80 {
           transform: rotate(-45deg) translate(6px, -5px);
         }
       }
+    }
+
+    &.move {
+      position: fixed;
+      top: 10px;
+      right: 10px;
     }
 
     .hamburger-bar {
@@ -365,7 +372,7 @@ footer {
   header {
     .container-80 {
       nav ul {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100%;
@@ -417,6 +424,7 @@ footer {
   }
 
   .projects {
+    margin-top: 2rem;
     .container-90 {
       width: 95%;
       grid-template-columns: 1fr;
