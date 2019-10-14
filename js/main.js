@@ -28,8 +28,6 @@ window.addEventListener("scroll", () => {
   } else {
     hamburger.classList.remove("move");
   }
-
-  // console.log(hamburgerPosition, window.innerHeight);
 });
 
 // ------ PROJECT INFO ANIMATION ------

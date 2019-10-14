@@ -391,6 +391,10 @@ header .container-80 .hamburger-menu .hamburger-bar {
   margin-top: 3rem;
 }
 
+#site-url {
+  color: #009a9a;
+}
+
 .projects {
   margin-top: 5rem;
   padding-bottom: 5rem;
@@ -466,7 +470,7 @@ header .container-80 .hamburger-menu .hamburger-bar {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 45%;
+  height: 48%;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   font-size: 0.7rem;
