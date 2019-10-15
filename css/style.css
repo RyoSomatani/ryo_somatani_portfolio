@@ -666,12 +666,25 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   }
+  header .container-80 {
+    -ms-grid-columns: 4fr 1fr 1fr;
+        grid-template-columns: 4fr 1fr 1fr;
+  }
+  header .container-80 .hamburger-menu {
+    visibility: visible;
+  }
+  header .container-80 .title h1 {
+    font-size: 1.5rem;
+  }
+  header .container-80 .title h2 {
+    font-size: 1.2rem;
+  }
   header .container-80 nav ul {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 300px;
+    width: 250px;
     background: #333;
     z-index: 1;
     display: -webkit-box;
@@ -704,18 +717,9 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   header .container-80 nav ul .nav-link.active {
     border: none;
   }
-  header .title h1 {
-    font-size: 1.5rem;
-  }
-  header .title h2 {
-    font-size: 1.2rem;
-  }
-  header .container-80 {
-    -ms-grid-columns: 4fr 1fr 1fr;
-        grid-template-columns: 4fr 1fr 1fr;
-  }
-  header .container-80 .hamburger-menu {
-    visibility: visible;
+  #intro {
+    margin-top: 1rem;
+    font-size: 0.8rem;
   }
   .projects {
     margin-top: 2rem;
@@ -774,6 +778,12 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   }
   footer .container-80 .footer-icon-container .back-to-top {
     margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .projects .container-90 .project .hover-overlay .project-info {
+    height: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

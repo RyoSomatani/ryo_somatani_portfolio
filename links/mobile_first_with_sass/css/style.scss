@@ -142,7 +142,8 @@ header {
 main {
   height: calc(100vh - 80px);
   margin-top: 80px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 // SHOWCASE SECTION
@@ -210,6 +211,13 @@ main {
 }
 
 // ABOUT SECTION
+#about {
+  .about-contents {
+    p {
+      margin: 1.5rem 0;
+    }
+  }
+}
 .section {
   .container-90 {
     padding: 4rem 0;
@@ -376,11 +384,12 @@ main {
   .contact-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 80%;
+    // width: 80%;
     margin: auto;
 
     .contact-info {
       div {
+        width: 100%;
         margin: 2rem 0;
         text-align: left;
         display: flex;
@@ -438,7 +447,8 @@ footer {
 }
 
 // MEDIA QUERIES
-@include md-screen {
+
+@media (min-width: 768px) {
   body {
     text-align: left;
   }
@@ -474,11 +484,19 @@ footer {
   }
 }
 
-@include lg-screen {
+@media (min-width: 900px) {
   .team {
     .members {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  main {
+    .container-90 {
+      width: 95%;
     }
   }
 }

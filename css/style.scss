@@ -391,12 +391,27 @@ footer {
 
   header {
     .container-80 {
+      grid-template-columns: 4fr 1fr 1fr;
+      .hamburger-menu {
+        visibility: visible;
+      }
+
+      .title {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+
       nav ul {
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
-        width: 300px;
+        width: 250px;
         background: #333;
         z-index: 1;
         display: flex;
@@ -425,22 +440,9 @@ footer {
     }
   }
 
-  header {
-    .title {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-    }
-    .container-80 {
-      grid-template-columns: 4fr 1fr 1fr;
-      .hamburger-menu {
-        visibility: visible;
-      }
-    }
+  #intro {
+    margin-top: 1rem;
+    font-size: 0.8rem;
   }
 
   .projects {
@@ -496,6 +498,21 @@ footer {
 
         .back-to-top {
           margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// 425px 以下
+@include sm-screen {
+  .projects {
+    .container-90 {
+      .project {
+        .hover-overlay {
+          .project-info {
+            height: 50%;
+          }
         }
       }
     }

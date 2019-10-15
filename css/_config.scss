@@ -27,6 +27,11 @@ $gray-5: #f4f4f4;
 }
 
 // For Media Queries
+@mixin sm-screen {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
 @mixin md-screen {
   @media (max-width: 768px) {
     @content;
