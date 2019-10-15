@@ -84,6 +84,7 @@ header .container-80 {
     justify-content: space-between;
     cursor: pointer;
     visibility: hidden;
+    outline: none;
     z-index: 1;
     @include secondary-transition;
     &.show {
@@ -121,6 +122,21 @@ header .container-80 {
 
 #intro {
   margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+#intro p:nth-child(3) {
+  margin-top: 5px;
+}
+
+#github-link a {
+  text-decoration: underline;
+  color: $color-2;
+  font-size: 0.9rem;
+}
+
+#github-link i {
+  font-size: 1.5rem;
 }
 
 #site-url {
@@ -203,7 +219,7 @@ header .container-80 {
         }
 
         &.hovered {
-          transform: translateY(0);
+          transform: none;
         }
       }
     }
@@ -368,8 +384,8 @@ footer {
 // 768px 以下
 @include md-screen {
   .wrapper {
-    width: 80%;
-    min-width: 450px;
+    width: 90%;
+    min-width: 300px;
     @include box-shadow-3;
   }
 
@@ -437,8 +453,14 @@ footer {
         width: 100%;
         min-height: 350px;
 
-        .project-info {
-          height: 40%;
+        .hover-overlay {
+          opacity: 1;
+          background: rgba($color-1, 0.2);
+
+          .project-info {
+            transform: none;
+            height: 40%;
+          }
         }
       }
     }
@@ -457,6 +479,8 @@ footer {
 
   footer {
     height: 120px;
+    width: 100%;
+
     .container-80 {
       grid-template-columns: 1fr;
       text-align: center;

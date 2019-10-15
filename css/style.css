@@ -349,6 +349,7 @@ header .container-80 .hamburger-menu {
           justify-content: space-between;
   cursor: pointer;
   visibility: hidden;
+  outline: none;
   z-index: 1;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -389,6 +390,21 @@ header .container-80 .hamburger-menu .hamburger-bar {
 
 #intro {
   margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+#intro p:nth-child(3) {
+  margin-top: 5px;
+}
+
+#github-link a {
+  text-decoration: underline;
+  color: #181818;
+  font-size: 0.9rem;
+}
+
+#github-link i {
+  font-size: 1.5rem;
 }
 
 #site-url {
@@ -486,8 +502,8 @@ header .container-80 .hamburger-menu .hamburger-bar {
 }
 
 .projects .container-90 .hover-overlay .project-info.hovered {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: none;
+          transform: none;
 }
 
 #project-1 {
@@ -645,8 +661,8 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
 
 @media (max-width: 768px) {
   .wrapper {
-    width: 80%;
-    min-width: 450px;
+    width: 90%;
+    min-width: 300px;
     -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   }
@@ -713,7 +729,13 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     width: 100%;
     min-height: 350px;
   }
-  .projects .container-90 .project .project-info {
+  .projects .container-90 .project .hover-overlay {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .projects .container-90 .project .hover-overlay .project-info {
+    -webkit-transform: none;
+            transform: none;
     height: 40%;
   }
   .contact {
@@ -730,6 +752,7 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   }
   footer {
     height: 120px;
+    width: 100%;
   }
   footer .container-80 {
     -ms-grid-columns: 1fr;
