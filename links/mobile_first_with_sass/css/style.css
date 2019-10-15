@@ -467,7 +467,8 @@ header .container-90 .hamburger .hamburger-bar {
 main {
   height: calc(100vh - 80px);
   margin-top: 80px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .showcase {
@@ -561,6 +562,10 @@ main {
 .showcase .container-90 .btn-3:hover {
   background: #dbdbdb;
   text-decoration: none;
+}
+
+#about .about-contents p {
+  margin: 1.5rem 0;
 }
 
 .section .container-90 {
@@ -743,11 +748,11 @@ main {
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  width: 80%;
   margin: auto;
 }
 
 .contact .contact-main .contact-info div {
+  width: 100%;
   margin: 2rem 0;
   text-align: left;
   display: -webkit-box;
@@ -841,6 +846,12 @@ footer p {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+  }
+}
+
+@media (max-width: 390px) {
+  main .container-90 {
+    width: 95%;
   }
 }
 

@@ -140,7 +140,7 @@ main {
   position: fixed;
   top: 55px;
   width: 100%;
-  overflow-x: scroll;
+  overflow: hidden scroll;
   height: calc(100vh - 55px);
 }
 
@@ -165,7 +165,7 @@ main {
 }
 
 #showcase {
-  height: 600px;
+  height: 100%;
   background: url(../img/bg-banner.jpg) center center/cover no-repeat;
 }
 
@@ -190,7 +190,7 @@ main {
 }
 
 #showcase .overlay .contents h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 1rem 0;
 }
 
@@ -301,15 +301,15 @@ main {
   background: #f4f4f4;
 }
 
-#organizations .container-3 {
+#organizations .container-4 {
   padding-top: 3rem;
 }
 
 #organizations #statistics {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (30%)[3];
-      grid-template-columns: repeat(3, 30%);
+  -ms-grid-columns: (25%)[3];
+      grid-template-columns: repeat(3, 25%);
   grid-gap: 2rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -332,11 +332,11 @@ main {
 }
 
 #organizations #statistics .card i {
-  font-size: 12rem;
+  font-size: 9rem;
 }
 
 #organizations .contents h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #organizations .contents h2 {
@@ -352,6 +352,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -364,16 +368,20 @@ main {
 }
 
 #subscription #subscription-form input[type="email"] {
-  width: 300px;
-  border-radius: 2rem 0 0 2rem;
+  width: 100%;
+  border-radius: 2rem;
   border: 1px solid #5fcf80;
+  margin: 1px;
+  font-size: 1rem;
 }
 
 #subscription #subscription-form input[type="submit"] {
   background: #5fcf80;
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 2rem;
   color: #fff;
   cursor: pointer;
+  width: 100%;
+  margin: 1px;
 }
 
 #subscription #subscription-form input[type="submit"]:hover, #subscription #subscription-form input[type="submit"]:focus {
@@ -417,7 +425,7 @@ main {
 }
 
 #members .grid-container .member img {
-  width: 300px;
+  min-width: 200px;
   border-radius: 25%;
 }
 
@@ -502,22 +510,26 @@ main {
 
 #pricing {
   background: #f4f4f4;
+  padding-top: 3rem;
 }
 
 #pricing #plans .plan {
   background: #fff;
   margin-bottom: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
 #pricing #plans .plan h2 {
   border-bottom: 2px solid #717f86;
-  padding-bottom: 1.5rem;
+  width: 170px;
+  padding-bottom: 5px;
+  margin: auto;
 }
 
 #pricing #plans .plan h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin: 1rem 0;
 }
 
 #pricing #plans .plan button.purchase {
@@ -593,6 +605,25 @@ footer p {
   padding-bottom: 2rem;
 }
 
+@media (min-width: 425px) {
+  #organizations #subscription-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #organizations #subscription-form input[type="email"] {
+    border-radius: 2rem 0 0 2rem;
+    margin: 0;
+    width: 70%;
+  }
+  #organizations #subscription-form input[type="submit"] {
+    border-radius: 0 2rem 2rem 0;
+    margin: 0;
+    width: 30%;
+  }
+}
+
 @media (min-width: 768px) {
   header .hamburger-container {
     display: none;
@@ -652,6 +683,9 @@ footer p {
     margin-left: 10px;
     font-size: 0.9rem;
   }
+  #showcase .overlay .contents h1 {
+    font-size: 2rem;
+  }
   #features .contents {
     display: -ms-grid;
     display: grid;
@@ -660,8 +694,8 @@ footer p {
     grid-gap: 1rem;
     margin: 3rem 0;
   }
-  #features .container-3 {
-    width: 90%;
+  #features .container-4 {
+    width: 95%;
   }
   #organizations .grid-container {
     display: -ms-grid;
@@ -669,6 +703,10 @@ footer p {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
+    width: 100%;
+  }
+  #organizations .grid-container #statistics {
+    width: 100%;
   }
   #workshops p {
     margin: 2rem 0;
@@ -701,6 +739,7 @@ footer p {
         grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
     text-align: center;
+    color: #616161;
   }
   #works .grid-container {
     width: 95%;
@@ -712,9 +751,6 @@ footer p {
     grid-gap: 1rem;
     font-size: 80%;
     text-align: center;
-  }
-  #pricing {
-    padding-top: 3rem;
   }
   #pricing #plans {
     margin: 2rem auto;
@@ -744,12 +780,31 @@ footer p {
   footer .grid-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 30% 30% 20%;
-        grid-template-columns: 30% 30% 20%;
+    -ms-grid-columns: 250px 250px 180px;
+        grid-template-columns: 250px 250px 180px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     grid-gap: 1rem;
+  }
+}
+
+@media (max-height: 320px) {
+  #showcase .overlay .contents h1:first-child {
+    font-size: 1.5rem;
+  }
+  #showcase .overlay .contents p,
+  #showcase .overlay .contents h1:nth-child(2) {
+    display: none;
+  }
+  #showcase .overlay .contents .btn-4 {
+    display: block;
+    width: 150px;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+  #showcase .overlay .contents #showcase-animation {
+    margin-top: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

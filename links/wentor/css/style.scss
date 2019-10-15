@@ -112,7 +112,7 @@ main {
   position: fixed;
   top: 55px;
   width: 100%;
-  overflow-x: scroll;
+  overflow: hidden scroll;
   height: calc(100vh - 55px);
 }
 
@@ -137,7 +137,7 @@ main {
 //==============================
 
 #showcase {
-  height: 600px;
+  height: 100%;
   background: url(../img/bg-banner.jpg) center center/cover no-repeat;
 
   .overlay {
@@ -152,7 +152,7 @@ main {
     .contents {
       color: $white;
       h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 1rem 0;
 
         &:nth-child(1) {
@@ -240,13 +240,13 @@ main {
 #organizations {
   background: $grey-5;
 
-  .container-3 {
+  .container-4 {
     padding-top: 3rem;
   }
 
   #statistics {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 25%);
     grid-gap: 2rem;
     justify-content: space-around;
     margin-bottom: 2rem;
@@ -266,14 +266,14 @@ main {
       }
 
       i {
-        font-size: 12rem;
+        font-size: 9rem;
       }
     }
   }
 
   .contents {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     h2 {
@@ -292,6 +292,7 @@ main {
 
   #subscription-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
     input {
@@ -301,16 +302,20 @@ main {
     }
 
     input[type="email"] {
-      width: 300px;
-      border-radius: 2rem 0 0 2rem;
+      width: 100%;
+      border-radius: 2rem;
       border: 1px solid $color-2;
+      margin: 1px;
+      font-size: 1rem;
     }
 
     input[type="submit"] {
       background: $color-2;
-      border-radius: 0 2rem 2rem 0;
+      border-radius: 2rem;
       color: $white;
       cursor: pointer;
+      width: 100%;
+      margin: 1px;
 
       &:hover,
       &:focus {
@@ -362,7 +367,7 @@ main {
       }
 
       img {
-        width: 300px;
+        min-width: 200px;
         border-radius: 25%;
       }
     }
@@ -445,21 +450,25 @@ main {
 //==============================
 #pricing {
   background: $grey-5;
+  padding-top: 3rem;
 
   #plans {
     .plan {
       background: $white;
       margin-bottom: 1rem;
-      padding: 1rem 1.5rem;
+      padding: 3rem 1.5rem;
       text-align: center;
 
       h2 {
         border-bottom: 2px solid $color-1;
-        padding-bottom: 1.5rem;
+        width: 170px;
+        padding-bottom: 5px;
+        margin: auto;
       }
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin: 1rem 0;
       }
 
       button.purchase {
@@ -549,6 +558,26 @@ footer {
 //========== Media Queries ==========
 //===================================
 
+@media (min-width: 425px) {
+  #organizations {
+    #subscription-form {
+      flex-direction: row;
+
+      input[type="email"] {
+        border-radius: 2rem 0 0 2rem;
+        margin: 0;
+        width: 70%;
+      }
+
+      input[type="submit"] {
+        border-radius: 0 2rem 2rem 0;
+        margin: 0;
+        width: 30%;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   header {
     .hamburger-container {
@@ -606,6 +635,16 @@ footer {
     }
   }
 
+  #showcase {
+    .overlay {
+      .contents {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
   #features {
     .contents {
       display: grid;
@@ -614,8 +653,8 @@ footer {
       margin: 3rem 0;
     }
 
-    .container-3 {
-      width: 90%;
+    .container-4 {
+      width: 95%;
     }
   }
 
@@ -624,6 +663,11 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 3rem;
+      width: 100%;
+
+      #statistics {
+        width: 100%;
+      }
     }
   }
 
@@ -664,6 +708,7 @@ footer {
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
       text-align: center;
+      color: $grey-2;
     }
   }
 
@@ -681,8 +726,6 @@ footer {
   }
 
   #pricing {
-    padding-top: 3rem;
-
     #plans {
       margin: 2rem auto;
       display: grid;
@@ -712,9 +755,36 @@ footer {
   footer {
     .grid-container {
       display: grid;
-      grid-template-columns: 30% 30% 20%;
+      grid-template-columns: 250px 250px 180px;
       justify-content: center;
       grid-gap: 1rem;
+    }
+  }
+}
+
+@media (max-height: 320px) {
+  #showcase {
+    .overlay {
+      .contents {
+        h1:first-child {
+          font-size: 1.5rem;
+        }
+        p,
+        h1:nth-child(2) {
+          display: none;
+        }
+
+        .btn-4 {
+          display: block;
+          width: 150px;
+          margin: auto;
+          font-size: 0.9rem;
+        }
+
+        #showcase-animation {
+          margin-top: 1rem;
+        }
+      }
     }
   }
 }
