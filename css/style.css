@@ -796,4 +796,37 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     height: 50%;
   }
 }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+  #intro {
+    margin-top: 1.5rem;
+  }
+  .projects {
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  .projects .project {
+    margin-bottom: 120px;
+  }
+  .projects .project .hover-overlay {
+    opacity: 1;
+    background: transparent;
+    overflow: visible;
+  }
+  .projects .project .hover-overlay .project-icon-container {
+    display: none;
+  }
+  .projects .project .hover-overlay .project-info {
+    height: 50%;
+    -webkit-transform: none;
+            transform: none;
+    bottom: -50%;
+  }
+  footer {
+    padding: 3rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

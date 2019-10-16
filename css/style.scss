@@ -353,10 +353,13 @@ footer {
   }
 }
 
+//===================================
 //========== MEDIA QUERIES ==========
 //===================================
 
+// =====================
 // 920px 以下
+// =====================
 @include lg-screen {
   header {
     .container-80 {
@@ -384,7 +387,9 @@ footer {
   }
 }
 
+// =====================
 // 768px 以下
+// =====================
 @include md-screen {
   .wrapper {
     width: 90%;
@@ -507,7 +512,9 @@ footer {
   }
 }
 
+// =====================
 // 425px 以下
+// =====================
 @include sm-screen {
   .projects {
     .container-90 {
@@ -519,5 +526,45 @@ footer {
         }
       }
     }
+  }
+}
+
+// =====================
+// プリント用 MediaQuery
+// =====================
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+
+  #intro {
+    margin-top: 1.5rem;
+  }
+
+  .projects {
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    .project {
+      margin-bottom: 120px;
+
+      .hover-overlay {
+        opacity: 1;
+        background: transparent;
+        overflow: visible;
+        .project-icon-container {
+          display: none;
+        }
+
+        .project-info {
+          height: 50%;
+          transform: none;
+          bottom: -50%;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 3rem;
   }
 }
