@@ -28,13 +28,13 @@ header #branding {
   transform: translateX(5%);
   display: flex;
 
-  h1 {
+  .branding__heading {
     color: $color-2;
     align-self: center;
   }
 }
 
-.hamburger-container {
+.hamburger {
   position: fixed;
   top: 0;
   right: 0;
@@ -44,11 +44,11 @@ header #branding {
   transform: translatex(-5%);
 }
 
-.toggler {
+.hamburger__toggler {
   z-index: 3;
 }
 
-.hamburger-menu {
+.hamburger__menu {
   z-index: 2;
 }
 
@@ -67,14 +67,14 @@ nav {
     transform: none;
   }
 
-  .nav-list {
+  .nav__nav-list {
     width: 90%;
     margin: 2rem auto;
 
-    li {
+    .nav__nav-item {
       text-align: center;
 
-      a.nav-menu-link {
+      .nav__nav-link {
         display: block;
         padding: 1rem 0 1rem 0;
 
@@ -104,7 +104,7 @@ nav {
   }
 }
 
-.toggler:checked ~ #nav-menu {
+.hamburger__toggler:checked ~ #nav-menu {
   margin-top: 0;
 }
 
@@ -120,7 +120,7 @@ main {
   text-align: center;
   margin: 1rem 0;
 
-  h1 {
+  .section-header__heading {
     margin-bottom: 2rem;
     transform: translateX(10%);
     opacity: 0;
@@ -140,7 +140,7 @@ main {
   height: 100%;
   background: url(../img/bg-banner.jpg) center center/cover no-repeat;
 
-  .overlay {
+  .showcase__overlay {
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
@@ -155,7 +155,7 @@ main {
         font-size: 1.5rem;
         margin: 1rem 0;
 
-        &:nth-child(1) {
+        &.showcase__heading {
           display: inline-block;
 
           border: $color-2 solid 0.3rem;
@@ -177,7 +177,7 @@ main {
         justify-content: center;
         margin: 5% auto 0 auto;
 
-        div {
+        .showcase-animation__item {
           width: 5px;
           height: 5px;
           background: $white;
@@ -216,13 +216,13 @@ main {
 #features {
   padding-top: 3rem;
 
-  .feature-box {
+  .feature__box {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 2rem;
 
-    h3 {
+    .feature__box__heading {
       margin-bottom: 1rem;
     }
 
@@ -251,7 +251,7 @@ main {
     justify-content: space-around;
     margin-bottom: 2rem;
 
-    .card {
+    .statistics__card {
       background: $color-2;
       text-align: center;
       border-radius: 0 2rem 2rem 2rem;
@@ -261,7 +261,7 @@ main {
         margin: 1rem 0;
       }
 
-      h1 {
+      .statistics__card__heading {
         font-size: 2rem;
       }
 
@@ -272,11 +272,11 @@ main {
   }
 
   .contents {
-    h1 {
+    .statistics__contents__heading {
       font-size: 2rem;
     }
 
-    h2 {
+    .statistics__contents__heading2 {
       color: $color-2;
       margin-bottom: 2rem;
     }
@@ -334,7 +334,7 @@ main {
   margin-bottom: 5rem;
 
   .grid-container {
-    .card {
+    .workshops__card {
       background: $white;
       padding: 2rem;
       margin-bottom: 1rem;
@@ -385,7 +385,7 @@ main {
     color: $grey-3;
     padding: 1rem;
 
-    .example {
+    .feedback__example {
       margin: 2rem 0;
       transform: translateY(50%);
       opacity: 0;
@@ -396,7 +396,7 @@ main {
         opacity: 1;
       }
 
-      p {
+      .feedback__p {
         margin-bottom: 1rem;
       }
     }
@@ -421,7 +421,7 @@ main {
       display: block;
     }
 
-    .work-contents {
+    .work__contents {
       position: absolute;
       background: rgba(0, 0, 0, 0.6);
       color: $grey-4;
@@ -459,19 +459,19 @@ main {
       padding: 3rem 1.5rem;
       text-align: center;
 
-      h2 {
+      .plan__plan-name {
         border-bottom: 2px solid $color-1;
         width: 170px;
         padding-bottom: 5px;
         margin: auto;
       }
 
-      h1 {
+      .plan__price {
         font-size: 2rem;
         margin: 1rem 0;
       }
 
-      button.purchase {
+      .plan__btn {
         width: 100%;
         padding: 1rem 0;
         font-size: 1rem;
@@ -508,7 +508,7 @@ footer {
   color: $grey-4;
   padding: 3rem;
 
-  h1 {
+  .footer__heading {
     text-align: center;
     padding: 2rem 0;
   }
@@ -548,7 +548,7 @@ footer {
     }
   }
 
-  p {
+  .footer__copyright {
     text-align: center;
     padding-bottom: 2rem;
   }
@@ -580,12 +580,12 @@ footer {
 
 @media (min-width: 768px) {
   header {
-    .hamburger-container {
+    .hamburger {
       display: none;
     }
 
-    .hamburger-menu,
-    .toggler {
+    .hamburger__menu,
+    .hamburger__toggler {
       visibility: hidden;
     }
 
@@ -608,17 +608,17 @@ footer {
       display: flex;
       justify-content: flex-end;
 
-      ul.nav-list {
+      ul.nav__nav-list {
         display: grid;
         grid-template-columns: repeat(6, auto);
         align-items: center;
         margin: 0;
         max-width: 80%;
 
-        li {
+        .nav__nav-item {
           text-align: right;
           width: 90%;
-          .nav-menu-link {
+          .nav__nav-link {
             padding: 0;
             height: 100%;
           }
@@ -636,7 +636,7 @@ footer {
   }
 
   #showcase {
-    .overlay {
+    .showcase__overlay {
       .contents {
         h1 {
           font-size: 2rem;
@@ -672,7 +672,7 @@ footer {
   }
 
   #workshops {
-    p {
+    .workshops__p {
       margin: 2rem 0;
     }
 
@@ -746,7 +746,7 @@ footer {
         height: 150px;
       }
     }
-    .btn-3 {
+    .contact__btn {
       display: inline-block;
       width: 30% !important;
     }
@@ -764,17 +764,17 @@ footer {
 
 @media (max-height: 320px) {
   #showcase {
-    .overlay {
+    .showcase__overlay {
       .contents {
-        h1:first-child {
+        .showcase__heading {
           font-size: 1.5rem;
         }
-        p,
-        h1:nth-child(2) {
+        .showcase__p,
+        .showcase__heading-2 {
           display: none;
         }
 
-        .btn-4 {
+        .showcase__btn {
           display: block;
           width: 150px;
           margin: auto;

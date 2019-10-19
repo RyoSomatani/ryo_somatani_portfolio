@@ -20,7 +20,7 @@
   max-width: 900px;
 }
 
-.toggler {
+.hamburger__toggler {
   width: 20px;
   height: 20px;
   position: fixed;
@@ -32,23 +32,23 @@
   opacity: 0;
 }
 
-.toggler:checked ~ .hamburger-menu .hamburger-bar {
+.hamburger__toggler:checked ~ .hamburger__menu .hamburger__bar {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-.toggler:checked ~ .hamburger-menu .hamburger-bar::before,
-.toggler:checked ~ .hamburger-menu .hamburger-bar::after {
+.hamburger__toggler:checked ~ .hamburger__menu .hamburger__bar::before,
+.hamburger__toggler:checked ~ .hamburger__menu .hamburger__bar::after {
   top: 0;
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
-.toggler:checked ~ nav {
+.hamburger__toggler:checked ~ nav {
   transform: none;
 }
 
-.hamburger-menu {
+.hamburger__menu {
   width: 20px;
   height: 20px;
   position: fixed;
@@ -67,7 +67,7 @@
   z-index: 1;
 }
 
-.hamburger-menu .hamburger-bar {
+.hamburger__menu .hamburger__bar {
   height: 4px;
   width: 100%;
   background: #333;
@@ -79,7 +79,7 @@
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.hamburger-menu .hamburger-bar::before {
+.hamburger__menu .hamburger__bar::before {
   content: "";
   position: absolute;
   top: 8px;
@@ -89,7 +89,7 @@
   border-radius: 20px;
 }
 
-.hamburger-menu .hamburger-bar::after {
+.hamburger__menu .hamburger__bar::after {
   content: "";
   position: absolute;
   top: -8px;

@@ -1,7 +1,7 @@
 //==============================
 //== HAMBURGER MENU ANIMATION ==
 //==============================
-const toggler = document.querySelector(".toggler");
+const toggler = document.querySelector(".hamburger__toggler");
 const navMenu = document.querySelector("nav");
 
 toggler.addEventListener("click", () => {

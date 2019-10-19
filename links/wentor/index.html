@@ -18,38 +18,38 @@
       <!-- コンテンツを含めないnavbarのみの為のdiv(レスポンシブ化の為) -->
       <div class="blank-navbar"></div>
 
-      <div id="branding">
-        <h1>WENTOR</h1>
+      <div id="branding" class="branding">
+        <h1 class="branding__heading">WENTOR</h1>
       </div>
 
       <!-- Hamburger Menu icon -->
-      <div class="hamburger-container">
-        <input type="checkbox" class="toggler" />
-        <div class="hamburger-menu">
-          <div class="hamburger-bar"></div>
+      <div class="hamburger">
+        <input type="checkbox" class="hamburger__toggler" />
+        <div class="hamburger__menu">
+          <div class="hamburger__bar"></div>
         </div>
       </div>
 
       <!-- Nav -->
-      <nav>
-        <ul class="nav-list">
-          <li>
-            <a href="#features" class="nav-menu-link">Features</a>
+      <nav class="nav">
+        <ul class="nav__nav-list">
+          <li class="nav__nav-item">
+            <a href="#features" class="nav__nav-link">Features</a>
           </li>
-          <li>
-            <a href="#organizations" class="nav-menu-link">Organizations</a>
+          <li class="nav__nav-item">
+            <a href="#organizations" class="nav__nav-link">Organizations</a>
           </li>
-          <li>
-            <a href="#works" class="nav-menu-link">Works</a>
+          <li class="nav__nav-item">
+            <a href="#works" class="nav__nav-link">Works</a>
           </li>
-          <li>
-            <a href="#pricing" class="nav-menu-link">Pricing</a>
+          <li class="nav__nav-item">
+            <a href="#pricing" class="nav__nav-link">Pricing</a>
           </li>
-          <li>
-            <a href="#" class="nav-menu-link">Sign In</a>
+          <li class="nav__nav-item">
+            <a href="#" class="nav__nav-link">Sign In</a>
           </li>
-          <li>
-            <a href="#free-trial" id="free-trial-link" class="nav-menu-link"
+          <li class="nav__nav-item">
+            <a href="#free-trial" id="free-trial-link" class="nav__nav-link"
               >Free Trial</a
             >
           </li>
@@ -60,17 +60,21 @@
     <main>
       <!-- Showcase Section -->
       <section id="showcase">
-        <div class="overlay">
+        <div class="showcase__overlay">
           <div class="contents container-4">
-            <h1>TRUST & QUALITY</h1>
-            <h1>Learning today...Leading tomorrow.</h1>
-            <p>
+            <h1 class="showcase__heading">TRUST & QUALITY</h1>
+            <h1 class="showcase__heading-2">
+              Learning today...Leading tomorrow.
+            </h1>
+            <p class="showcase__p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
               deserunt aliquid saepe, explicabo voluptatum odit sed!
             </p>
-            <a href="#free-trial" class="btn-4">GET A QUATE</a>
+            <a href="#free-trial" class="showcase__btn btn-4">GET A QUATE</a>
 
-            <a href="#features" id="showcase-animation"><div></div></a>
+            <a href="#features" id="showcase-animation"
+              ><div class="showcase-animation__item"></div
+            ></a>
           </div>
         </div>
       </section>
@@ -79,7 +83,7 @@
       <section id="features">
         <div class="container-4">
           <div class="section-header">
-            <h1>Features</h1>
+            <h1 class="section-header__heading">Features</h1>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
               eveniet error sunt voluptas esse quidem corrupti quia dolor veniam
@@ -88,10 +92,10 @@
           </div>
 
           <div class="contents">
-            <div class="feature-box">
+            <div class="feature__box">
               <i class="fab fa-css3"></i>
               <div class="feature">
-                <h3>Latest Technologies</h3>
+                <h3 class="feature__box__heading">Latest Technologies</h3>
                 <P>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Tenetur soluta voluptate dicta, perferendis, nemo, eos facere
@@ -101,10 +105,10 @@
               </div>
             </div>
 
-            <div class="feature-box">
+            <div class="feature__box">
               <i class="fab fa-drupal"></i>
               <div class="feature">
-                <h3>Toons Background</h3>
+                <h3 class="feature__box__heading">Toons Background</h3>
                 <P>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Tenetur soluta voluptate dicta, perferendis, nemo, eos facere
@@ -114,10 +118,10 @@
               </div>
             </div>
 
-            <div class="feature-box">
+            <div class="feature__box">
               <i class="fas fa-trophy"></i>
               <div class="feature">
-                <h3>Award Winning Design</h3>
+                <h3 class="feature__box__heading">Award Winning Design</h3>
                 <P>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Tenetur soluta voluptate dicta, perferendis, nemo, eos facere
@@ -134,23 +138,23 @@
       <section id="organizations">
         <div class="container-4">
           <div class="grid-container">
-            <div id="statistics">
-              <div class="card">
-                <h1>65%</h1>
+            <div id="statistics" class="statistics">
+              <div class="statistics__card">
+                <h1 class="statistics__card__heading">65%</h1>
                 <p>Say NO!</p>
                 <div class="icon">
                   <i class="fas fa-male"></i>
                 </div>
               </div>
-              <div class="card">
-                <h1>20%</h1>
+              <div class="statistics__card">
+                <h1 class="statistics__card__heading">20%</h1>
                 <p>Say YES!</p>
                 <div class="icon">
                   <i class="fas fa-male"></i>
                 </div>
               </div>
-              <div class="card">
-                <h1>15%</h1>
+              <div class="statistics__card">
+                <h1 class="statistics__card__heading">15%</h1>
                 <p>Can't Say!</p>
                 <div class="icon">
                   <i class="fas fa-male"></i>
@@ -159,8 +163,12 @@
             </div>
 
             <div class="contents">
-              <h1>IS INCLUSIVE QUALITY EDUCATION AFFORDABLE?</h1>
-              <h2>Revised and Updated for 2019</h2>
+              <h1 class="statistics__contents__heading">
+                IS INCLUSIVE QUALITY EDUCATION AFFORDABLE?
+              </h1>
+              <h2 class="statistics__contents__heading2">
+                Revised and Updated for 2019
+              </h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
                 voluptas magni, molestias officiis esse sint explicabo quo
@@ -169,9 +177,9 @@
             </div>
           </div>
 
-          <div id="subscription">
+          <div id="subscription" class="subscription">
             <div class="section-header">
-              <h1>Subscribe Now</h1>
+              <h1 class="section-header__heading">Subscribe Now</h1>
               <p>
                 Sign up for our free weekly software design courses, we’ll send
                 them right to your inbox.
@@ -190,14 +198,14 @@
           <!-- Workshops -->
           <div id="workshops">
             <h1>Upcoming Workshop</h1>
-            <p>
+            <p class="workshops__p">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
               in eius quos inventore atque quam debitis ipsa saepe. Libero,
               accusantium.
             </p>
 
             <div class="grid-container">
-              <div class="card">
+              <div class="workshops__card">
                 <div class="container-1">
                   <div class="icon">
                     <i class="fab fa-html5"></i>
@@ -206,7 +214,7 @@
                 </div>
               </div>
 
-              <div class="card">
+              <div class="workshops__card">
                 <div class="container-1">
                   <div class="icon">
                     <i class="fab fa-css3"></i>
@@ -215,7 +223,7 @@
                 </div>
               </div>
 
-              <div class="card">
+              <div class="workshops__card">
                 <div class="container-1">
                   <div class="icon">
                     <i class="fab fa-joomla"></i>
@@ -230,7 +238,9 @@
           <div id="members">
             <div class="container-4">
               <div class="section-header">
-                <h1>Meet Our Faculty Members</h1>
+                <h1 class="section-header__heading">
+                  Meet Our Faculty Members
+                </h1>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Commodi itaque, molestias facilis saepe sit reiciendis
@@ -278,7 +288,9 @@
           <!-- Customer Feedback -->
           <div id="customer-feedback">
             <div class="section-header">
-              <h1>See What Our Customer Are Saying?</h1>
+              <h1 class="section-header__heading">
+                See What Our Customer Are Saying?
+              </h1>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
                 nostrum officia recusandae doloremque fuga esse laudantium
@@ -287,16 +299,16 @@
             </div>
 
             <div id="feedback-examples">
-              <div class="example">
-                <p>
+              <div class="feedback__example">
+                <p class="feedback__p">
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolore totam culpa modi labore blanditiis distinctio omnis?
                   Corrupti, error.""
                 </p>
                 <p>Abraham Doe - Creative Dırector</p>
               </div>
-              <div class="example">
-                <p>
+              <div class="feedback__example">
+                <p class="feedback__p">
                   "Doloremque deleniti minima ducimus ex laudantium veritatis
                   enim veniam sint delectus, ad nihil nisi, aspernatur nulla
                   non.""
@@ -312,7 +324,7 @@
       <section id="works">
         <div class="container-4">
           <div class="section-header">
-            <h1>Works</h1>
+            <h1 class="section-header__heading">Works</h1>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Dignissimos vero voluptatem ipsum. Molestiae perferendis quibusdam
@@ -323,7 +335,7 @@
           <div class="grid-container">
             <div class="work">
               <img src="./img/work01.jpg" />
-              <div class="work-contents">
+              <div class="work__contents">
                 <h1>Work One</h1>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur. Qui et atque placeat
@@ -333,7 +345,7 @@
             </div>
             <div class="work">
               <img src="./img/work02.jpg" />
-              <div class="work-contents">
+              <div class="work__contents">
                 <h1>Work Two</h1>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur. Qui et atque placeat
@@ -343,7 +355,7 @@
             </div>
             <div class="work">
               <img src="./img/work03.jpg" />
-              <div class="work-contents">
+              <div class="work__contents">
                 <h1>Work Three</h1>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur. Qui et atque placeat
@@ -353,7 +365,7 @@
             </div>
             <div class="work">
               <img src="./img/work04.jpg" />
-              <div class="work-contents">
+              <div class="work__contents">
                 <h1>Work Four</h1>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur. Qui et atque placeat
@@ -363,7 +375,7 @@
             </div>
             <div class="work">
               <img src="./img/work05.jpg" />
-              <div class="work-contents">
+              <div class="work__contents">
                 <h1>Work Five</h1>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur. Qui et atque placeat
@@ -373,7 +385,7 @@
             </div>
             <div class="work">
               <img src="./img/work06.jpg" />
-              <div class="work-contents">
+              <div class="work__contents">
                 <h1>Work Six</h1>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur. Qui et atque placeat
@@ -389,7 +401,7 @@
       <section id="pricing">
         <div class="container-4">
           <div class="section-header">
-            <h1>Pricing</h1>
+            <h1 class="section-header__heading">Pricing</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
               sit delectus, earum temporibus voluptatum tempore eius aliquam
@@ -399,19 +411,19 @@
 
           <div id="plans">
             <div class="plan">
-              <h2>Monthly Plan</h2>
-              <h1>$200</h1>
-              <button class="purchase">purchase</button>
+              <h2 class="plan__plan-name">Monthly Plan</h2>
+              <h1 class="plan__price">$200</h1>
+              <button class="plan__btn">purchase</button>
             </div>
             <div class="plan">
-              <h2>Quarterly Plan</h2>
-              <h1>$800</h1>
-              <button class="purchase">purchase</button>
+              <h2 class="plan__plan-name">Quarterly Plan</h2>
+              <h1 class="plan__price">$800</h1>
+              <button class="plan__btn">purchase</button>
             </div>
             <div class="plan">
-              <h2>Year Plan</h2>
-              <h1>$1200</h1>
-              <button class="purchase">purchase</button>
+              <h2 class="plan__plan-name">Year Plan</h2>
+              <h1 class="plan__price">$1200</h1>
+              <button class="plan__btn">purchase</button>
             </div>
           </div>
         </div>
@@ -421,7 +433,7 @@
       <div class="container-4">
         <section id="contact">
           <div class="section-header">
-            <h1>Contact</h1>
+            <h1 class="section-header__heading">Contact</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
               et. Nihil explicabo obcaecati tenetur, odit accusamus animi iusto
@@ -446,7 +458,7 @@
             </div>
             <input
               type="submit"
-              class="btn-3"
+              class="contact__btn btn-3"
               id="submit-btn"
               value="Send Email"
             />
@@ -456,8 +468,8 @@
 
       <!-- Footer Section -->
       <footer>
-        <div id="free-trial" class="container-4">
-          <h1>Start Your Free Trial Now!</h1>
+        <div id="free-trial" class="footer container-4">
+          <h1 class="footer__heading">Start Your Free Trial Now!</h1>
           <div class="grid-container">
             <input type="text" id="trial-name" placeholder="Enter Your Name" />
             <input
@@ -477,7 +489,7 @@
             <i class="fab fa-linkedin"></i>
           </div>
 
-          <p>&copy; 2019 Wentor Theme.</p>
+          <p class="footer__copyright">&copy; 2019 Wentor Theme.</p>
         </div>
       </footer>
     </main>
