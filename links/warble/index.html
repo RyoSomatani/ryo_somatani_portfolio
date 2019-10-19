@@ -22,35 +22,41 @@
     <!-- NAVBAR SECTION -->
     <section class="navbar">
       <div class="container-90">
-        <h1 class="branding text-uppercase">
+        <h1 class="navbar__branding text-uppercase">
           warble
         </h1>
-        <nav>
-          <ul>
-            <li class="nav-item">
-              <a href="#showcase" class="nav-link text-uppercase">home</a>
+        <nav class="navbar__nav">
+          <ul class="navbar__ul">
+            <li class="navbar__nav-item">
+              <a href="#showcase" class="navbar__nav-link text-uppercase"
+                >home</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link text-uppercase">about</a>
+            <li class="navbar__nav-item">
+              <a href="#about" class="navbar__nav-link text-uppercase">about</a>
             </li>
-            <li class="nav-item">
-              <a href="#services" class="nav-link text-uppercase">services</a>
+            <li class="navbar__nav-item">
+              <a href="#services" class="navbar__nav-link text-uppercase"
+                >services</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="#blog" class="nav-link text-uppercase">blog</a>
+            <li class="navbar__nav-item">
+              <a href="#blog" class="navbar__nav-link text-uppercase">blog</a>
             </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link text-uppercase">contact</a>
+            <li class="navbar__nav-item">
+              <a href="#contact" class="navbar__nav-link text-uppercase"
+                >contact</a
+              >
             </li>
           </ul>
         </nav>
 
         <!-- FOOTER SECTION -->
-        <footer>
-          <p class="text-capitalize">
+        <footer class="footer">
+          <p class="footer__content text-capitalize">
             &copy; 2019, all rights reserved
           </p>
-          <div class="sns-icons">
+          <div class="footer__sns-icons">
             <a href="http://www.facebook.com" class="sns-icon" target="_blank">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -70,34 +76,36 @@
 
     <main>
       <!-- SHOWCASE SECTION -->
-      <section id="showcase">
-        <div class="container-80 showcase-animation-container">
+      <section id="showcase" class="showcase">
+        <div class="container-80 showcase__animation-container">
           <h1 id="showcase-text" class="text-capitalize"></h1>
-          <p class="my-2">
+          <p class="showcase__p my-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
             asperiores?
           </p>
-          <a href="#about" class="btn text-capitalize showcase-btn-1 mr-2"
+          <a
+            href="#about"
+            class="showcase__btn text-capitalize showcase__btn-1 mr-2"
             ><i class="fas fa-tv"></i> link</a
           >
-          <a href="#about" class="btn text-capitalize showcase-btn-2"
+          <a href="#about" class="showcase__btn text-capitalize showcase__btn-2"
             >learn more <i class="fas fa-arrow-right"></i
           ></a>
         </div>
       </section>
 
       <!-- ABOUT SECTION -->
-      <section id="about" class="section">
+      <section id="about" class="about section">
         <div class="container-90">
-          <div>
+          <div class="about__content">
             <h3 class="section-title">about company</h3>
-            <p>
+            <p class="about__p1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
               cumque aspernatur, quidem labore accusamus nemo in adipisci
               officia nihil pariatur illo aliquam perspiciatis dignissimos
               provident delectus optio aperiam vitae fugit.
             </p>
-            <p>
+            <p class="about__p2">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Inventore maiores facere architecto hic dignissimos voluptatibus.
             </p>
@@ -107,56 +115,56 @@
       </section>
 
       <!-- SERVICES SECTION -->
-      <section id="services" class="section">
+      <section id="services" class="services section">
         <div class="container-90">
           <h3 class="section-title">services</h3>
-          <div class="services-cards">
-            <div class="services-card">
-              <div class="card-icon">
+          <div class="services__cards">
+            <div class="services__cards__card">
+              <div class="services__cards__card__icon">
                 <i class="fas fa-cog"></i>
               </div>
               <div>
-                <h6 class="text-uppercase">strategy</h6>
-                <p>
+                <h6 class="services__subheader text-uppercase">strategy</h6>
+                <p class="services__card__p">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Temporibus, nostrum. Ducimus ullam libero id adipisci porro
                   quibusdam a non sunt?
                 </p>
               </div>
             </div>
-            <div class="services-card">
-              <div class="card-icon">
+            <div class="services__cards__card">
+              <div class="services__cards__card__icon">
                 <i class="fas fa-search"></i>
               </div>
               <div>
                 <h6 class="text-uppercase">explore</h6>
-                <p>
+                <p class="services__card__p">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Temporibus, nostrum. Ducimus ullam libero id adipisci porro
                   quibusdam a non sunt?
                 </p>
               </div>
             </div>
-            <div class="services-card">
-              <div class="card-icon">
+            <div class="services__cards__card">
+              <div class="services__cards__card__icon">
                 <i class="fas fa-paper-plane"></i>
               </div>
               <div>
                 <h6 class="text-uppercase">direction</h6>
-                <p>
+                <p class="services__card__p">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Temporibus, nostrum. Ducimus ullam libero id adipisci porro
                   quibusdam a non sunt?
                 </p>
               </div>
             </div>
-            <div class="services-card">
-              <div class="card-icon">
+            <div class="services__cards__card">
+              <div class="services__cards__card__icon">
                 <i class="fas fa-user-tie"></i>
               </div>
               <div>
                 <h6 class="text-uppercase">expertise</h6>
-                <p>
+                <p class="services__card__p">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Temporibus, nostrum. Ducimus ullam libero id adipisci porro
                   quibusdam a non sunt?
@@ -168,17 +176,17 @@
       </section>
 
       <!-- BLOG SECTION -->
-      <section id="blog" class="section">
+      <section id="blog" class="blog section">
         <div class="container-90">
           <h3 class="section-title">recent blog</h3>
-          <div class="blog-cards">
-            <div class="blog-card">
+          <div class="blog__cards">
+            <div class="blog__cards__card">
               <div class="card-header">
                 <img src="./img/blog-img-1.jpg" alt="jellyfish swimming" />
               </div>
-              <div class="card-body">
-                <h6>inspirational website</h6>
-                <p>
+              <div class="blog__card__body">
+                <h6 class="blog__card__heading">inspirational website</h6>
+                <p class="blog__card__p">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   aut nostrum enim repellendus autem fugiat.
                 </p>
@@ -188,13 +196,13 @@
               </div>
             </div>
 
-            <div class="blog-card">
+            <div class="blog__cards__card">
               <div class="card-header">
                 <img src="./img/blog-img-2.jpg" alt="multiple colorful eggs" />
               </div>
-              <div class="card-body">
-                <h6>inspirational website</h6>
-                <p>
+              <div class="blog__card__body">
+                <h6 class="blog__card__heading">inspirational website</h6>
+                <p class="blog__card__p">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   aut nostrum enim repellendus autem fugiat.
                 </p>
@@ -204,16 +212,16 @@
               </div>
             </div>
 
-            <div class="blog-card">
+            <div class="blog__cards__card">
               <div class="card-header">
                 <img
                   src="./img/blog-img-3.jpg"
                   alt="christmas decorational accessories"
                 />
               </div>
-              <div class="card-body">
-                <h6>inspirational website</h6>
-                <p>
+              <div class="blog__card__body">
+                <h6 class="blog__card__heading">inspirational website</h6>
+                <p class="blog__card__p">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   aut nostrum enim repellendus autem fugiat.
                 </p>
@@ -223,16 +231,16 @@
               </div>
             </div>
 
-            <div class="blog-card">
+            <div class="blog__cards__card">
               <div class="card-header">
                 <img
                   src="./img/blog-img-4.jpg"
                   alt="books, flowers, and rolls of strings on a desk"
                 />
               </div>
-              <div class="card-body">
-                <h6>inspirational website</h6>
-                <p>
+              <div class="blog__card__body">
+                <h6 class="blog__card__heading">inspirational website</h6>
+                <p class="blog__card__p">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   aut nostrum enim repellendus autem fugiat.
                 </p>
@@ -246,10 +254,10 @@
       </section>
 
       <!-- CONTACT SECTION -->
-      <section id="contact" class="section">
+      <section id="contact" class="contact section">
         <div class="container-90">
           <h3 class="section-title">get in touch</h3>
-          <form>
+          <form class="contact__form">
             <input type="text" name="name" id="name" placeholder="Name" />
             <input type="email" name="email" id="email" placeholder="Email" />
             <input

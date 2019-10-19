@@ -95,14 +95,16 @@ function replaceText() {
 
 // 実際にクラス名を追加してアニメーションを開始
 function showContent() {
-  document.querySelector(".showcase-animation-container").classList.add("show");
+  document
+    .querySelector(".showcase__animation-container")
+    .classList.add("show");
   setTimeout(hideContent, 5000);
 }
 
 // 一定時間でコンテントを引っ込める
 function hideContent() {
   document
-    .querySelector(".showcase-animation-container")
+    .querySelector(".showcase__animation-container")
     .classList.remove("show");
 
   setTimeout(replaceText, 700);
@@ -110,7 +112,7 @@ function hideContent() {
 
 // SERVICES CARDS ANIMATION
 const servicesSection = document.querySelector("#services");
-const servicesCards = document.querySelectorAll(".services-card");
+const servicesCards = document.querySelectorAll(".services__cards__card");
 
 // ページのスクロールをトリガーに、位置情報を確保
 main.addEventListener("scroll", getPosition);

@@ -28,18 +28,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-    .branding {
+    .navbar__branding {
       font-size: 2.2rem;
       margin-bottom: 5rem;
     }
 
-    nav {
+    .navbar__nav {
       transform: translateY(-50%);
-      ul {
-        li {
+      .navbar__ul {
+        .navbar__nav-item {
           margin-bottom: 2rem;
 
-          a {
+          .navbar__nav-link {
             position: relative;
             outline: none;
 
@@ -72,12 +72,12 @@ body {
       }
     }
     footer {
-      p {
+      .footer__content {
         padding-bottom: 1rem;
         color: $color-3;
       }
 
-      .sns-icon {
+      .footer__sns-icons {
         margin: 0 0.5rem;
 
         i {
@@ -108,23 +108,23 @@ main {
   justify-content: center;
   text-align: center;
 
-  h1 {
+  #showcase-text {
     font-size: 2.5rem;
     font-weight: 100;
   }
 
-  p {
+  .showcase__p {
     font-size: 1rem;
   }
 
-  .btn {
+  .showcase__btn {
     padding: 1.3rem 2.5rem;
     text-transform: uppercase;
     font-size: 0.8rem;
     display: inline-block;
   }
 
-  .showcase-btn-1 {
+  .showcase__btn-1 {
     background: $color-2;
     margin-right: 3px;
     @include secondary-transition;
@@ -135,7 +135,7 @@ main {
     }
   }
 
-  .showcase-btn-2 {
+  .showcase__btn-2 {
     background: $white;
     color: $black;
     margin-left: 3px;
@@ -147,7 +147,7 @@ main {
     }
   }
 
-  .showcase-animation-container {
+  .showcase__animation-container {
     opacity: 0;
     transform: translateY(20%);
     @include secondary-transition;
@@ -176,7 +176,7 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 
-    div {
+    .about__content {
       p {
         margin-bottom: 1rem;
         color: $color-3;
@@ -188,12 +188,12 @@ main {
 
 // SERVICES SECTION
 #services {
-  .services-cards {
+  .services__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
 
-    .services-card {
+    .services__cards__card {
       display: grid;
       grid-template-columns: 1fr 4fr;
       grid-gap: 1rem;
@@ -206,17 +206,17 @@ main {
         transform: translateX(0);
       }
 
-      h6 {
+      .services__subheader {
         font-size: 1rem;
         margin-bottom: 1rem;
         @include primary-letter-spacing;
       }
 
-      p {
+      .services__card__p {
         color: $color-3;
       }
 
-      i {
+      .services__cards__card__icon i {
         padding: 1.5rem;
         background: $color-4;
         color: $color-2;
@@ -229,22 +229,22 @@ main {
 
 // BLOG SECTION
 #blog {
-  .blog-cards {
+  .blog__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
 
-    .blog-card {
-      .card-body {
+    .blog__cards__card {
+      .blog__card__body {
         padding: 1rem;
         background: $white;
 
-        h6 {
+        .blog__card__heading {
           font-size: 1.1rem;
           @include primary-letter-spacing;
         }
 
-        p {
+        .blog__card__p {
           color: $color-3;
           margin: 1rem 0;
         }
@@ -278,7 +278,7 @@ main {
     font-size: 1.5rem;
   }
 
-  form {
+  .contact__form {
     display: grid;
     grid-template-areas:
       "name msg"
@@ -364,26 +364,26 @@ main {
         margin: auto;
       }
 
-      div {
+      .about__content {
         order: 1;
       }
     }
   }
   #blog {
-    .blog-cards {
+    .blog__cards {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   #services {
-    .services-cards {
+    .services__cards {
       grid-template-columns: 1fr;
     }
   }
 
   #contact {
     .container-90 {
-      form {
+      .contact__form {
         display: block;
         width: 100%;
 
@@ -412,7 +412,7 @@ main {
   }
 
   #showcase {
-    .btn {
+    .showcase__btn {
       width: 80%;
       margin: 10px 0;
     }
@@ -427,7 +427,7 @@ main {
   }
 
   #blog {
-    .blog-cards {
+    .blog__cards {
       grid-template-columns: 1fr;
     }
   }
@@ -436,7 +436,7 @@ main {
 @media (max-height: 800px) {
   .navbar {
     .container-90 {
-      nav {
+      .navbar__nav {
         transform: none;
       }
     }
@@ -447,22 +447,22 @@ main {
   .navbar {
     overflow: scroll;
     .container-90 {
-      nav {
+      .navbar__nav {
         transform: none;
       }
     }
   }
 
   #showcase {
-    p {
+    .showcase__p {
       display: none;
     }
 
-    h1 {
+    #showcase-text {
       margin-bottom: 10%;
     }
 
-    .btn {
+    .showcase__btn {
       width: 50%;
     }
   }

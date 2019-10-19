@@ -377,26 +377,26 @@ body {
           justify-content: space-between;
 }
 
-.navbar .container-90 .branding {
+.navbar .container-90 .navbar__branding {
   font-size: 2.2rem;
   margin-bottom: 5rem;
 }
 
-.navbar .container-90 nav {
+.navbar .container-90 .navbar__nav {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.navbar .container-90 nav ul li {
+.navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item {
   margin-bottom: 2rem;
 }
 
-.navbar .container-90 nav ul li a {
+.navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item .navbar__nav-link {
   position: relative;
   outline: none;
 }
 
-.navbar .container-90 nav ul li a::after {
+.navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item .navbar__nav-link::after {
   content: "";
   height: 2px;
   width: 0;
@@ -408,7 +408,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.navbar .container-90 nav ul li a:hover:after, .navbar .container-90 nav ul li a:focus:after {
+.navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item .navbar__nav-link:hover:after, .navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item .navbar__nav-link:focus:after {
   content: "";
   height: 2px;
   width: 100%;
@@ -420,16 +420,16 @@ body {
   transition: all 0.3s ease;
 }
 
-.navbar .container-90 footer p {
+.navbar .container-90 footer .footer__content {
   padding-bottom: 1rem;
   color: #909090;
 }
 
-.navbar .container-90 footer .sns-icon {
+.navbar .container-90 footer .footer__sns-icons {
   margin: 0 0.5rem;
 }
 
-.navbar .container-90 footer .sns-icon i {
+.navbar .container-90 footer .footer__sns-icons i {
   font-size: 1.1rem;
 }
 
@@ -459,35 +459,35 @@ main {
   text-align: center;
 }
 
-#showcase h1 {
+#showcase #showcase-text {
   font-size: 2.5rem;
   font-weight: 100;
 }
 
-#showcase p {
+#showcase .showcase__p {
   font-size: 1rem;
 }
 
-#showcase .btn {
+#showcase .showcase__btn {
   padding: 1.3rem 2.5rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   display: inline-block;
 }
 
-#showcase .showcase-btn-1 {
+#showcase .showcase__btn-1 {
   background: #228896;
   margin-right: 3px;
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
 }
 
-#showcase .showcase-btn-1:hover {
+#showcase .showcase__btn-1:hover {
   background: #f4f4f4;
   color: #228896;
 }
 
-#showcase .showcase-btn-2 {
+#showcase .showcase__btn-2 {
   background: #fff;
   color: #181818;
   margin-left: 3px;
@@ -495,12 +495,12 @@ main {
   transition: all 0.8s ease-out;
 }
 
-#showcase .showcase-btn-2:hover {
+#showcase .showcase__btn-2:hover {
   background: #181818;
   color: #fff;
 }
 
-#showcase .showcase-animation-container {
+#showcase .showcase__animation-container {
   opacity: 0;
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
@@ -508,7 +508,7 @@ main {
   transition: all 0.8s ease-out;
 }
 
-#showcase .showcase-animation-container.show {
+#showcase .showcase__animation-container.show {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -533,13 +533,13 @@ main {
   grid-gap: 1rem;
 }
 
-#about .container-90 div p {
+#about .container-90 .about__content p {
   margin-bottom: 1rem;
   color: #909090;
   line-height: 2;
 }
 
-#services .services-cards {
+#services .services__cards {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -547,7 +547,7 @@ main {
   grid-gap: 2rem;
 }
 
-#services .services-cards .services-card {
+#services .services__cards .services__cards__card {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 4fr;
@@ -560,23 +560,23 @@ main {
   transition: all 0.8s ease-out;
 }
 
-#services .services-cards .services-card.show {
+#services .services__cards .services__cards__card.show {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-#services .services-cards .services-card h6 {
+#services .services__cards .services__cards__card .services__subheader {
   font-size: 1rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
 
-#services .services-cards .services-card p {
+#services .services__cards .services__cards__card .services__card__p {
   color: #909090;
 }
 
-#services .services-cards .services-card i {
+#services .services__cards .services__cards__card .services__cards__card__icon i {
   padding: 1.5rem;
   background: #ddd;
   color: #228896;
@@ -584,7 +584,7 @@ main {
   border-radius: 50%;
 }
 
-#blog .blog-cards {
+#blog .blog__cards {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -592,26 +592,26 @@ main {
   grid-gap: 1rem;
 }
 
-#blog .blog-cards .blog-card .card-body {
+#blog .blog__cards .blog__cards__card .blog__card__body {
   padding: 1rem;
   background: #fff;
 }
 
-#blog .blog-cards .blog-card .card-body h6 {
+#blog .blog__cards .blog__cards__card .blog__card__body .blog__card__heading {
   font-size: 1.1rem;
   letter-spacing: 2px;
 }
 
-#blog .blog-cards .blog-card .card-body p {
+#blog .blog__cards .blog__cards__card .blog__card__body .blog__card__p {
   color: #909090;
   margin: 1rem 0;
 }
 
-#blog .blog-cards .blog-card .card-body a {
+#blog .blog__cards .blog__cards__card .blog__card__body a {
   font-size: 0.8em;
 }
 
-#blog .blog-cards .blog-card .card-body a:hover, #blog .blog-cards .blog-card .card-body a:focus {
+#blog .blog__cards .blog__cards__card .blog__card__body a:hover, #blog .blog__cards .blog__cards__card .blog__card__body a:focus {
   text-decoration: underline;
 }
 
@@ -635,39 +635,39 @@ main {
   font-size: 1.5rem;
 }
 
-#contact form {
+#contact .contact__form {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "name msg" "email msg" "phone btn";
   grid-gap: 1rem;
 }
 
-#contact form input#name {
+#contact .contact__form input#name {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: name;
 }
 
-#contact form input#email {
+#contact .contact__form input#email {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: email;
 }
 
-#contact form input#phone-number {
+#contact .contact__form input#phone-number {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: phone;
 }
 
-#contact form textarea#msg {
+#contact .contact__form textarea#msg {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: msg;
 }
 
-#contact form .form-btn-container #form-btn {
+#contact .contact__form .form-btn-container #form-btn {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: btn;
@@ -677,7 +677,7 @@ main {
   padding: 1rem 3rem;
 }
 
-#contact form .form-btn-container #form-btn:hover {
+#contact .contact__form .form-btn-container #form-btn:hover {
   background: #fff;
   color: #228896;
 }
@@ -725,27 +725,27 @@ main {
     width: 60%;
     margin: auto;
   }
-  #about .container-90 div {
+  #about .container-90 .about__content {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  #blog .blog-cards {
+  #blog .blog__cards {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  #services .services-cards {
+  #services .services__cards {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  #contact .container-90 form {
+  #contact .container-90 .contact__form {
     display: block;
     width: 100%;
   }
-  #contact .container-90 form input {
+  #contact .container-90 .contact__form input {
     height: 50px;
   }
-  #contact .container-90 form * {
+  #contact .container-90 .contact__form * {
     width: 100%;
     margin: 0.5rem 0;
   }
@@ -759,21 +759,21 @@ main {
     -webkit-transform: translateX(200px);
             transform: translateX(200px);
   }
-  #showcase .btn {
+  #showcase .showcase__btn {
     width: 80%;
     margin: 10px 0;
   }
   #about .container-90 img {
     width: 100%;
   }
-  #blog .blog-cards {
+  #blog .blog__cards {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
 }
 
 @media (max-height: 800px) {
-  .navbar .container-90 nav {
+  .navbar .container-90 .navbar__nav {
     -webkit-transform: none;
             transform: none;
   }
@@ -783,17 +783,17 @@ main {
   .navbar {
     overflow: scroll;
   }
-  .navbar .container-90 nav {
+  .navbar .container-90 .navbar__nav {
     -webkit-transform: none;
             transform: none;
   }
-  #showcase p {
+  #showcase .showcase__p {
     display: none;
   }
-  #showcase h1 {
+  #showcase #showcase-text {
     margin-bottom: 10%;
   }
-  #showcase .btn {
+  #showcase .showcase__btn {
     width: 50%;
   }
 }
