@@ -56,18 +56,18 @@ const scoreTableBody = document.querySelector("#scores");
 const msg = document.querySelector("#message");
 const startBtn = document.querySelector("#start-btn");
 const restartBtn = document.querySelector("#restart-btn");
-const pageBackBtn = document.querySelector("#page-back-btn");
+const pageBackBtn = document.querySelector("#page-back__btn");
 let threeSeconds = 3 + 1;
 
 let selectedLanguage;
 
 // 単語の言語選択
-const langBtns = document.querySelectorAll(".lang-btn");
+const langBtns = document.querySelectorAll(".lang-options__btn");
 
 langBtns.forEach(langBtn => {
   langBtn.addEventListener("click", e => {
     eval(`selectedLanguage=${e.target.id}`);
-    document.querySelector(".select-language").style.display = "none";
+    document.querySelector(".lang-options").style.display = "none";
     scoreTableBody.style.display = "table-row-group";
   });
 });

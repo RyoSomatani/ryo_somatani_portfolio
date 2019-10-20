@@ -19,7 +19,7 @@ body {
   position: relative;
 }
 
-.select-language {
+.lang-options {
   position: absolute;
   top: 0;
   right: 0;
@@ -40,10 +40,10 @@ body {
     width: 100%;
   }
 
-  .lang-option-btns {
+  .lang-options__btns {
     display: flex;
     flex-direction: column;
-    .lang-btn {
+    .lang-options__btn {
       padding: 1rem 2rem;
       margin: 1rem;
       outline: none;
@@ -110,7 +110,7 @@ body {
   position: relative;
   height: 40px;
 
-  .btn {
+  .btns__btn {
     position: absolute;
     top: 0;
     right: 50%;
@@ -152,7 +152,7 @@ body {
   .page-back {
     transform: translateY(-80%);
 
-    #page-back-btn h5 {
+    #page-back__btn h5 {
       font-size: 1rem;
     }
   }
@@ -169,7 +169,7 @@ body {
     width: 80%;
   }
 
-  .btns .btn {
+  .btns .btns__btn {
     padding: 0.6rem 2rem;
   }
 }
@@ -199,7 +199,7 @@ body {
     .btns {
       margin: 1rem 0 0 0 !important;
 
-      .btn {
+      .btns__btn {
         padding: 0.6rem 2rem;
       }
     }

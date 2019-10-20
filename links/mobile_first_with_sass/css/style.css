@@ -377,7 +377,7 @@ header .container-90 nav {
           transform: translateY(-200%);
 }
 
-header .container-90 nav ul {
+header .container-90 nav .nav__list {
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,11 +391,11 @@ header .container-90 nav ul {
           justify-content: space-between;
 }
 
-header .container-90 nav ul .nav-item {
+header .container-90 nav .nav__list .nav__item {
   height: auto;
 }
 
-header .container-90 nav ul .nav-item .nav-link {
+header .container-90 nav .nav__list .nav__item .nav__link {
   display: inline-block;
   height: 100%;
   padding: 0;
@@ -408,12 +408,12 @@ header .container-90 nav ul .nav-item .nav-link {
   position: relative;
 }
 
-header .container-90 nav ul .nav-item .nav-link:hover, header .container-90 nav ul .nav-item .nav-link:focus {
+header .container-90 nav .nav__list .nav__item .nav__link:hover, header .container-90 nav .nav__list .nav__item .nav__link:focus {
   opacity: 0.6;
   color: inherit;
 }
 
-header .container-90 nav ul .nav-item .nav-link::after {
+header .container-90 nav .nav__list .nav__item .nav__link::after {
   content: "";
   height: 2px;
   width: 0;
@@ -425,7 +425,7 @@ header .container-90 nav ul .nav-item .nav-link::after {
   transition: all 0.4s ease;
 }
 
-header .container-90 nav ul .nav-item .nav-link:hover:after, header .container-90 nav ul .nav-item .nav-link:focus:after {
+header .container-90 nav .nav__list .nav__item .nav__link:hover:after, header .container-90 nav .nav__list .nav__item .nav__link:focus:after {
   content: "";
   height: 2px;
   width: 100%;
@@ -458,7 +458,7 @@ header .container-90 .hamburger {
   z-index: 3;
 }
 
-header .container-90 .hamburger .hamburger-bar {
+header .container-90 .hamburger .hamburger__bar {
   background: #181818;
   height: 2px;
   width: 100%;
@@ -487,7 +487,7 @@ main {
   color: #f4f4f4;
 }
 
-.showcase .container-90 #showcase-heading {
+.showcase .container-90 #showcase__heading {
   width: auto;
 }
 
@@ -551,7 +551,7 @@ main {
   }
 }
 
-.showcase .container-90 .btn-3 {
+.showcase .container-90 .showcase__btn {
   background: #f4f4f4;
   color: #181818;
   margin-top: 6rem;
@@ -559,12 +559,12 @@ main {
   transition: all 0.4s ease;
 }
 
-.showcase .container-90 .btn-3:hover {
+.showcase .container-90 .showcase__btn:hover {
   background: #dbdbdb;
   text-decoration: none;
 }
 
-#about .about-contents p {
+#about .about__contents p {
   margin: 1.5rem 0;
 }
 
@@ -572,7 +572,7 @@ main {
   padding: 4rem 0;
 }
 
-.section-header {
+.section__header {
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -591,28 +591,27 @@ main {
           align-items: center;
 }
 
-.about-section-2 .container-90 div {
+.about-section-2 .container-90 .about-section-2__contents {
   padding: 2rem;
 }
 
-.about-section-2 .container-90 div :first-child {
-  height: 50%;
-}
-
-.about-section-2 .container-90 div p {
+.about-section-2 .container-90 .about-section-2__contents .about-section-2__contents__p {
   margin: 2rem 0;
 }
 
-.about-section-2 .container-90 div img {
+.about-section-2 .container-90 .about-section-2__contents .about-section-2__img {
   border-radius: 5px;
   height: 100%;
 }
 
-.about-section-2 .container-90 div .btn:hover {
-  background: #181818;
-  color: #f4f4f4;
+.about-section-2 .container-90 .about-section-2__contents .about-section-2__btn {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.about-section-2 .container-90 .about-section-2__contents .about-section-2__btn:hover {
+  background: #181818;
+  color: #f4f4f4;
 }
 
 .team .members {
@@ -627,27 +626,27 @@ main {
   background: #f4f4f4;
 }
 
-.team .members .member h5 {
+.team .members .member .member__info {
+  padding: 2rem;
+}
+
+.team .members .member .member__info .member__info__member-number {
   margin: 1rem 0;
   color: #9b9b9b;
 }
 
-.team .members .member .btn {
+.team .members .member .member__info .member__info__btn {
   margin-top: 2rem;
   background: #fff;
 }
 
-.team .members .member .btn:hover, .team .members .member .btn:focus {
+.team .members .member .member__info .member__info__btn:hover, .team .members .member .member__info .member__info__btn:focus {
   background: #e6e6e6;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.team .members .member .member-info {
-  padding: 2rem;
-}
-
-.our-work .all-works {
+.works .works__all-works {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -655,12 +654,12 @@ main {
   grid-gap: 1rem;
 }
 
-.our-work .all-works .work {
+.works .works__all-works .works__all-works__work {
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
-.our-work .all-works .work:hover {
+.works .works__all-works .works__all-works__work:hover {
   opacity: 0.5;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -677,15 +676,15 @@ main {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-.skills .container-90 .section-header {
+.skills .container-90 .section__header {
   padding: 2rem 2rem 2rem 0;
 }
 
-.skills .container-90 .section-header h4 {
+.skills .container-90 .section__header .skills__heading {
   margin-bottom: 2rem;
 }
 
-.skills .container-90 .skill-barcharts {
+.skills .container-90 .skill__barcharts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,20 +697,20 @@ main {
           justify-content: center;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart {
   margin: 2rem 0;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart h5 {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .skill__barcharts__barchart__skill-name {
   text-align: left;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline {
   width: 100%;
   background: #ccc;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value {
   background: #181818;
   color: #f4f4f4;
   text-align: center;
@@ -719,31 +718,31 @@ main {
   transition: width 0.4s ease-in;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value.barchart-value-1 {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value.barchart__value-1 {
   width: 0;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value.barchart-value-1.show {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value.barchart__value-1.show {
   width: 80%;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value.barchart-value-2 {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value.barchart__value-2 {
   width: 0;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value.barchart-value-2.show {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value.barchart__value-2.show {
   width: 85%;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value.barchart-value-3 {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value.barchart__value-3 {
   width: 0;
 }
 
-.skills .container-90 .skill-barcharts .skill-barchart .barchart-outline .barchart-value.barchart-value-3.show {
+.skills .container-90 .skill__barcharts .skill__barcharts__barchart .barchart__outline .barchart__value.barchart__value-3.show {
   width: 95%;
 }
 
-.contact .contact-main {
+.contact .contact__main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -751,7 +750,7 @@ main {
   margin: auto;
 }
 
-.contact .contact-main .contact-info div {
+.contact .contact__main .contact__info .contact__info__item {
   width: 100%;
   margin: 2rem 0;
   text-align: left;
@@ -763,26 +762,26 @@ main {
           justify-content: center;
 }
 
-.contact .contact-main .contact-info div i {
+.contact .contact__main .contact__info .contact__info__item i {
   font-size: 2.5rem;
   margin-right: 20px;
   width: 50px;
 }
 
-.contact .contact-main form input,
-.contact .contact-main form textarea {
+.contact .contact__main form .form__input,
+.contact .contact__main form .form__textarea {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.contact .contact-main form .btn {
+.contact .contact__main form .btn {
   background: #181818;
   color: #f4f4f4;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.contact .contact-main form .btn:hover, .contact .contact-main form .btn:focus {
+.contact .contact__main form .btn:hover, .contact .contact__main form .btn:focus {
   background: #f4f4f4;
   color: #181818;
 }
@@ -792,15 +791,15 @@ footer {
   padding: 4rem;
 }
 
-footer .btn {
+footer .footer__btn {
   width: auto;
 }
 
-footer .btn:hover, footer .btn:focus {
+footer .footer__btn:hover, footer .footer__btn:focus {
   text-decoration: underline;
 }
 
-footer p {
+footer .footer__p {
   padding-top: 2rem;
   margin: 0;
   color: #f4f4f4;
@@ -817,7 +816,7 @@ footer p {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  header .container-90 nav ul {
+  header .container-90 nav .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -856,13 +855,13 @@ footer p {
 }
 
 @media (max-height: 600px) {
-  #showcase .btn-3 {
+  #showcase .showcase__btn {
     margin: 0;
   }
 }
 
 @media (max-height: 450px) {
-  #showcase p {
+  #showcase .showcase__p {
     display: none;
   }
 }

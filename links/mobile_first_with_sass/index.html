@@ -23,23 +23,23 @@
         </div>
 
         <!-- NAV MENU -->
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
             </li>
-            <li class="nav-item">
-              <a href="#team" class="nav-link"
+            <li class="nav__item">
+              <a href="#team" class="nav__link"
                 ><i class="fas fa-users"></i> Team</a
               >
             </li>
-            <li class="nav-item">
-              <a href="#work" class="nav-link"
+            <li class="nav__item">
+              <a href="#works" class="nav__link"
                 ><i class="far fa-image"></i> Work</a
               >
             </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link"
+            <li class="nav__item">
+              <a href="#contact" class="nav__link"
                 ><i class="fas fa-envelope"></i> Contact</a
               >
             </li>
@@ -48,9 +48,9 @@
 
         <!-- HAMBURGER MENU ICON-->
         <div class="hamburger">
-          <div class="hamburger-bar"></div>
-          <div class="hamburger-bar"></div>
-          <div class="hamburger-bar"></div>
+          <div class="hamburger__bar"></div>
+          <div class="hamburger__bar"></div>
+          <div class="hamburger__bar"></div>
         </div>
       </div>
     </header>
@@ -59,17 +59,17 @@
       <!-- SHOWCASE SECTION -->
       <section id="showcase" class="showcase">
         <div class="container-90">
-          <div class="showcase-contents">
-            <h2 id="showcase-heading" class="text-capitalize">
+          <div class="showcase__contents">
+            <h2 id="showcase__heading" class="text-capitalize">
               mobile first website with
             </h2>
             <h2 id="auto-type" class="text-capitalize"></h2>
-            <p class="my-4">
+            <p class="showcase__p my-4">
               This website was created using Sass. Lorem ipsum dolor sit amet
               consectetur adipisicing elit. Vero blanditiis cumque quia
               obcaecati saepe eligendi!
             </p>
-            <a href="#about" class="btn-3">Learn More</a>
+            <a href="#about" class="showcase__btn btn-3">Learn More</a>
           </div>
         </div>
       </section>
@@ -77,24 +77,24 @@
       <!-- ABOUT SECTION -->
       <section id="about" class="about section">
         <div class="container-90">
-          <div class="section-header">
+          <div class="section__header">
             <h4 class="text-capitalize">about us</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
-          <div class="about-contents">
-            <p>
+          <div class="about__contents">
+            <p class="about__contents__p1">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
               est, eveniet possimus doloremque necessitatibus ea odio aliquid
               corporis explicabo soluta!
             </p>
-            <p>
+            <p class="about__contents__p2">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
               neque natus accusamus, obcaecati incidunt minima officia
               voluptatum eius voluptatem libero amet nesciunt fugit a aliquid
               alias quo! Error, quia perspiciatis.
             </p>
-            <p>
+            <p class="about__contents__p3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
               minima deserunt vel optio! Temporibus vitae labore voluptatibus
               laboriosam. Repudiandae ipsam alias pariatur distinctio accusamus
@@ -107,18 +107,22 @@
       <!-- ABOUT SECTION 2 -->
       <section class="about-section-2">
         <div class="container-90">
-          <div>
+          <div class="about-section-2__contents">
             <h4>Heading</h4>
-            <p>
+            <p class="about-section-2__contents__p">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
               obcaecati asperiores molestias deserunt reiciendis cupiditate
               suscipit at id voluptas? Ad laboriosam enim repellat.
             </p>
-            <a href="#work" class="btn">View Our Works</a>
+            <a href="#work" class="about-section-2__btn btn">View Our Works</a>
           </div>
 
           <div>
-            <img src="./img/info-pic.jpg" alt="woman on her phone" />
+            <img
+              src="./img/info-pic.jpg"
+              alt="woman on her phone"
+              class="about-section-2__img"
+            />
           </div>
         </div>
       </section>
@@ -126,73 +130,73 @@
       <!-- TEAM SECTION -->
       <section id="team" class="section team">
         <div class="container-90">
-          <div class="section-header">
+          <div class="section__header">
             <h4 class="text-capitalize">the team</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
           <div class="members">
             <div class="member">
-              <div class="member-img">
+              <div class="member__img__container">
                 <img src="./img/team-member-1.jpg" alt="member-1" />
               </div>
-              <div class="member-info">
-                <h4>Anja Doe</h4>
-                <h5>Member one</h5>
+              <div class="member__info">
+                <h4 class="member__info__name">Anja Doe</h4>
+                <h5 class="member__info__member-number">Member one</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. ex
                   vitae officiis reprehenderit nobis a? Fugit, ex.
                 </p>
-                <a href="#!" class="btn">
+                <a href="#!" class="member__info__btn btn">
                   <i class="fas fa-envelope"></i> Contact</a
                 >
               </div>
             </div>
 
             <div class="member">
-              <div class="member-img">
+              <div class="member__img__container">
                 <img src="./img/team-member-2.jpg" alt="member-2" />
               </div>
-              <div class="member-info">
-                <h4>John Doe</h4>
-                <h5>Member two</h5>
+              <div class="member__info">
+                <h4 class="member__info__name">John Doe</h4>
+                <h5 class="member__info__member-number">Member two</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. ex
                   vitae officiis reprehenderit nobis a? Fugit, ex.
                 </p>
-                <a href="#!" class="btn">
+                <a href="#!" class="member__info__btn btn">
                   <i class="fas fa-envelope"></i> Contact</a
                 >
               </div>
             </div>
             <div class="member">
-              <div class="member-img">
+              <div class="member__img__container">
                 <img src="./img/team-member-3.jpg" alt="member-3" />
               </div>
-              <div class="member-info">
-                <h4>Mike Ross</h4>
-                <h5>Member three</h5>
+              <div class="member__info">
+                <h4 class="member__info__name">Mike Ross</h4>
+                <h5 class="member__info__member-number">Member three</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. ex
                   vitae officiis reprehenderit nobis a? Fugit, ex.
                 </p>
-                <a href="#!" class="btn">
+                <a href="#!" class="member__info__btn btn">
                   <i class="fas fa-envelope"></i> Contact</a
                 >
               </div>
             </div>
             <div class="member">
-              <div class="member-img">
+              <div class="member__img__container">
                 <img src="./img/team-member-4.jpg" alt="member-4" />
               </div>
-              <div class="member-info">
-                <h4>Jane Doe</h4>
-                <h5>Member four</h5>
+              <div class="member__info">
+                <h4 class="member__info__name">Jane Doe</h4>
+                <h5 class="member__info__member-number">Member four</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. ex
                   vitae officiis reprehenderit nobis a? Fugit, ex.
                 </p>
-                <a href="#!" class="btn">
+                <a href="#!" class="member__info__btn btn">
                   <i class="fas fa-envelope"></i> Contact</a
                 >
               </div>
@@ -202,39 +206,39 @@
       </section>
 
       <!-- WORK SECTION -->
-      <section id="work" class="section our-work">
+      <section id="works" class="section works">
         <div class="container-90">
-          <div class="section-header">
-            <h4 class="text-capitalize">our work</h4>
+          <div class="section__header">
+            <h4 class="text-capitalize">our works</h4>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
 
-          <div class="all-works">
-            <div class="work">
+          <div class="works__all-works">
+            <div class="works__all-works__work">
               <img src="./img/work-1.jpeg" alt="laptop on a desk" />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img src="./img/work-2.jpeg" alt="smart watch" />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img src="./img/work-3.jpg" alt="dishes on a desk" />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img src="./img/work-4.jpeg" alt="deers eating grass" />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img src="./img/work-5.jpeg" alt="piled documents" />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img
                 src="./img/work-6.jpeg"
                 alt="two people digging the ground"
               />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img src="./img/work-7.jpeg" alt="a man squatting" />
             </div>
-            <div class="work">
+            <div class="works__all-works__work">
               <img src="./img/work-8.jpeg" alt="black speaker" />
             </div>
           </div>
@@ -244,8 +248,8 @@
       <!-- SKILL SECTION -->
       <section class="section skills">
         <div class="container-90">
-          <div class="section-header">
-            <h4 class="text-capitalize">our skills</h4>
+          <div class="section__header">
+            <h4 class="skills__heading text-capitalize">our skills</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
               eligendi iste, quidem provident libero ea quam earum molestiae
@@ -258,12 +262,14 @@
             </p>
           </div>
 
-          <div class="skill-barcharts">
-            <div class="skill-barchart">
-              <h5><i class="fas fa-camera"></i> Skill A</h5>
-              <div class="barchart-outline">
+          <div class="skill__barcharts">
+            <div class="skill__barcharts__barchart">
+              <h5 class="skill__barcharts__barchart__skill-name">
+                <i class="fas fa-camera"></i> Skill A
+              </h5>
+              <div class="barchart__outline">
                 <div
-                  class="barchart-value barchart-value-1
+                  class="barchart__value barchart__value-1
             "
                 >
                   80%
@@ -271,17 +277,21 @@
               </div>
             </div>
 
-            <div class="skill-barchart">
-              <h5><i class="fas fa-laptop-code"></i> Skill B</h5>
-              <div class="barchart-outline">
-                <div class=" barchart-value barchart-value-2">85%</div>
+            <div class="skill__barcharts__barchart">
+              <h5 class="skill__barcharts__barchart__skill-name">
+                <i class="fas fa-laptop-code"></i> Skill B
+              </h5>
+              <div class="barchart__outline">
+                <div class=" barchart__value barchart__value-2">85%</div>
               </div>
             </div>
 
-            <div class="skill-barchart">
-              <h5><i class="fas fa-list"></i> Skill C</h5>
-              <div class="barchart-outline">
-                <div class=" barchart-value barchart-value-3">95%</div>
+            <div class="skill__barcharts__barchart">
+              <h5 class="skill__barcharts__barchart__skill-name">
+                <i class="fas fa-list"></i> Skill C
+              </h5>
+              <div class="barchart__outline">
+                <div class=" barchart__value barchart__value-3">95%</div>
               </div>
             </div>
           </div>
@@ -291,7 +301,7 @@
       <!-- CONTACT SECTION -->
       <section id="contact" class="section contact">
         <div class="container-90">
-          <div class="section-header">
+          <div class="section__header">
             <h4 class="text-capitalize">contact</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -299,41 +309,65 @@
             </p>
           </div>
 
-          <div class="contact-main">
-            <div class="contact-info">
-              <div><i class="fas fa-map-marker-alt"></i> Toronto, ON</div>
-              <div><i class="fas fa-phone"></i> 647-555-5555</div>
-              <div><i class="fas fa-envelope"></i> mail@email.com</div>
+          <div class="contact__main">
+            <div class="contact__info">
+              <div class="contact__info__item">
+                <i class="fas fa-map-marker-alt"></i> Toronto, ON
+              </div>
+              <div class="contact__info__item">
+                <i class="fas fa-phone"></i> 647-555-5555
+              </div>
+              <div class="contact__info__item">
+                <i class="fas fa-envelope"></i> mail@email.com
+              </div>
             </div>
 
-            <form>
-              <input type="text" name="name" id="name" placeholder="Name" />
-              <input type="email" name="email" id="email" placeholder="Email" />
+            <form class="form">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form__input"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form__input"
+                placeholder="Email"
+              />
               <input
                 type="text"
                 name="subject"
                 id="subject"
+                class="form__input"
                 placeholder="Subject"
               />
               <textarea
                 name="msg"
                 id="msg"
+                class="form__textarea"
                 cols="30"
                 rows="4"
                 placeholder="Message"
               ></textarea>
-              <input type="submit" class="btn" value="Send Message" />
+              <input
+                type="submit"
+                class="btn form__input"
+                value="Send Message"
+              />
             </form>
           </div>
         </div>
       </section>
 
-      <footer>
+      <footer class="footer">
         <div class="container-90">
-          <a href="#showcase" class="btn"
+          <a href="#showcase" class="footer__btn btn"
             ><i class="fas fa-angle-up"></i> To the top</a
           >
-          <p class="text-capitalize">
+          <p class="footer__p text-capitalize">
             mobile first website using sass &copy; 2019, Ryo Somatani
           </p>
         </div>

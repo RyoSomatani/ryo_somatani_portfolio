@@ -300,7 +300,7 @@ body {
   position: relative;
 }
 
-.select-language {
+.lang-options {
   position: absolute;
   top: 0;
   right: 0;
@@ -319,7 +319,7 @@ body {
           justify-content: center;
 }
 
-.select-language .title {
+.lang-options .title {
   position: absolute;
   top: 0;
   left: 50%;
@@ -328,7 +328,7 @@ body {
   width: 100%;
 }
 
-.select-language .lang-option-btns {
+.lang-options .lang-options__btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,20 +338,20 @@ body {
           flex-direction: column;
 }
 
-.select-language .lang-option-btns .lang-btn {
+.lang-options .lang-options__btns .lang-options__btn {
   padding: 1rem 2rem;
   margin: 1rem;
   outline: none;
   color: #935529;
 }
 
-.select-language .lang-option-btns .lang-btn:hover, .select-language .lang-option-btns .lang-btn:focus {
+.lang-options .lang-options__btns .lang-options__btn:hover, .lang-options .lang-options__btns .lang-options__btn:focus {
   text-decoration: underline;
   background: #935529;
   color: #ccc;
 }
 
-.select-language .lang-option-btns .lang-btn:active {
+.lang-options .lang-options__btns .lang-options__btn:active {
   border: 1px solid #ccc;
 }
 
@@ -406,7 +406,7 @@ body {
   height: 40px;
 }
 
-.btns .btn {
+.btns .btns__btn {
   position: absolute;
   top: 0;
   right: 50%;
@@ -446,7 +446,7 @@ body {
     -webkit-transform: translateY(-80%);
             transform: translateY(-80%);
   }
-  .page-back #page-back-btn h5 {
+  .page-back #page-back__btn h5 {
     font-size: 1rem;
   }
   #random-word {
@@ -458,7 +458,7 @@ body {
   #user-input {
     width: 80%;
   }
-  .btns .btn {
+  .btns .btns__btn {
     padding: 0.6rem 2rem;
   }
 }
@@ -488,7 +488,7 @@ body {
   .container .btns {
     margin: 1rem 0 0 0 !important;
   }
-  .container .btns .btn {
+  .container .btns .btns__btn {
     padding: 0.6rem 2rem;
   }
 }

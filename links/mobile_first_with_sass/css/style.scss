@@ -63,16 +63,16 @@ header {
       z-index: 1;
       transform: translateY(-200%);
 
-      ul {
+      .nav__list {
         height: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        .nav-item {
+        .nav__item {
           height: auto;
 
-          .nav-link {
+          .nav__link {
             display: inline-block;
             height: 100%;
             padding: 0;
@@ -89,7 +89,7 @@ header {
               color: inherit;
             }
 
-            // nav-link下のバー
+            // nav__link下のバー
             &::after {
               content: "";
               height: 2px;
@@ -101,7 +101,7 @@ header {
               @include primary-transition;
             }
 
-            // nav-link下のバーのトランジション
+            // nav__link下のバーのトランジション
             &:hover:after,
             &:focus:after {
               content: "";
@@ -130,7 +130,7 @@ header {
       cursor: pointer;
       z-index: 3;
 
-      .hamburger-bar {
+      .hamburger__bar {
         background: $color-1;
         height: 2px;
         width: 100%;
@@ -157,7 +157,7 @@ main {
   .container-90 {
     color: $color-2;
 
-    #showcase-heading {
+    #showcase__heading {
       width: auto;
     }
     #auto-type {
@@ -196,7 +196,7 @@ main {
       }
     }
 
-    .btn-3 {
+    .showcase__btn {
       background: $color-2;
       color: $color-1;
       margin-top: 6rem;
@@ -212,7 +212,7 @@ main {
 
 // ABOUT SECTION
 #about {
-  .about-contents {
+  .about__contents {
     p {
       margin: 1.5rem 0;
     }
@@ -224,7 +224,7 @@ main {
   }
 }
 
-.section-header {
+.section__header {
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -237,26 +237,25 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: center;
 
-    div {
+    .about-section-2__contents {
       padding: 2rem;
 
-      :first-child {
-        height: 50%;
-      }
-
-      p {
+      .about-section-2__contents__p {
         margin: 2rem 0;
       }
 
-      img {
+      .about-section-2__img {
         border-radius: 5px;
         height: 100%;
       }
 
-      .btn:hover {
-        background: $color-1;
-        color: $color-2;
+      .about-section-2__btn {
         @include primary-transition;
+
+        &:hover {
+          background: $color-1;
+          color: $color-2;
+        }
       }
     }
   }
@@ -272,36 +271,36 @@ main {
     .member {
       background: $gray-5;
 
-      h5 {
-        margin: 1rem 0;
-        color: darken($gray-5, 35%);
-      }
-
-      .btn {
-        margin-top: 2rem;
-        background: $white;
-
-        &:hover,
-        &:focus {
-          background: darken($white, 10%);
-          @include primary-transition;
-        }
-      }
-
-      .member-info {
+      .member__info {
         padding: 2rem;
+
+        .member__info__member-number {
+          margin: 1rem 0;
+          color: darken($gray-5, 35%);
+        }
+
+        .member__info__btn {
+          margin-top: 2rem;
+          background: $white;
+
+          &:hover,
+          &:focus {
+            background: darken($white, 10%);
+            @include primary-transition;
+          }
+        }
       }
     }
   }
 }
 
-.our-work {
-  .all-works {
+.works {
+  .works__all-works {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
 
-    .work {
+    .works__all-works__work {
       @include box-shadow-1;
 
       &:hover {
@@ -319,37 +318,37 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-    .section-header {
+    .section__header {
       padding: 2rem 2rem 2rem 0;
 
-      h4 {
+      .skills__heading {
         margin-bottom: 2rem;
       }
     }
 
-    .skill-barcharts {
+    .skill__barcharts {
       display: flex;
       flex-direction: column;
       justify-content: center;
 
-      .skill-barchart {
+      .skill__barcharts__barchart {
         margin: 2rem 0;
 
-        h5 {
+        .skill__barcharts__barchart__skill-name {
           text-align: left;
         }
 
-        .barchart-outline {
+        .barchart__outline {
           width: 100%;
           background: $gray-4;
 
-          .barchart-value {
+          .barchart__value {
             background: $color-1;
             color: $color-2;
             text-align: center;
             transition: width 0.4s ease-in;
 
-            &.barchart-value-1 {
+            &.barchart__value-1 {
               width: 0;
 
               &.show {
@@ -357,7 +356,7 @@ main {
               }
             }
 
-            &.barchart-value-2 {
+            &.barchart__value-2 {
               width: 0;
 
               &.show {
@@ -365,7 +364,7 @@ main {
               }
             }
 
-            &.barchart-value-3 {
+            &.barchart__value-3 {
               width: 0;
 
               &.show {
@@ -381,14 +380,13 @@ main {
 
 // CONTACT SECTION
 .contact {
-  .contact-main {
+  .contact__main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    // width: 80%;
     margin: auto;
 
-    .contact-info {
-      div {
+    .contact__info {
+      .contact__info__item {
         width: 100%;
         margin: 2rem 0;
         text-align: left;
@@ -404,8 +402,8 @@ main {
     }
 
     form {
-      input,
-      textarea {
+      .form__input,
+      .form__textarea {
         width: 100%;
         margin-bottom: 1rem;
       }
@@ -430,7 +428,7 @@ footer {
   background: $color-1;
   padding: 4rem;
 
-  .btn {
+  .footer__btn {
     width: auto;
 
     &:hover,
@@ -439,7 +437,7 @@ footer {
     }
   }
 
-  p {
+  .footer__p {
     padding-top: 2rem;
     margin: 0;
     color: $color-2;
@@ -461,7 +459,7 @@ footer {
         height: 100%;
         transform: translateY(0);
 
-        ul {
+        .nav__list {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -503,7 +501,7 @@ footer {
 
 @media (max-height: 600px) {
   #showcase {
-    .btn-3 {
+    .showcase__btn {
       margin: 0;
     }
   }
@@ -511,7 +509,7 @@ footer {
 
 @media (max-height: 450px) {
   #showcase {
-    p {
+    .showcase__p {
       display: none;
     }
   }

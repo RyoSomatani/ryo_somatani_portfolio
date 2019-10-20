@@ -41,7 +41,7 @@ function autoType() {
 // =================================
 // ========帯グラフアニメーション=======
 // =================================
-const barCharts = document.querySelectorAll(".barchart-value");
+const barCharts = document.querySelectorAll(".barchart__value");
 const main = document.querySelector("main");
 
 main.addEventListener("scroll", () => {
@@ -49,6 +49,8 @@ main.addEventListener("scroll", () => {
     const barPosition = bar.getBoundingClientRect().top;
     if (barPosition < window.innerHeight * 0.7) {
       bar.classList.add("show");
+    } else {
+      bar.classList.remove("show");
     }
   });
 });
