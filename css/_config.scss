@@ -26,6 +26,10 @@ $gray-5: #f4f4f4;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
+@mixin font-size-sm {
+  font-size: 0.85rem;
+}
+
 // For Media Queries
 @mixin sm-screen {
   @media (max-width: 425px) {
@@ -38,7 +42,13 @@ $gray-5: #f4f4f4;
   }
 }
 @mixin lg-screen {
-  @media (max-width: 920px) {
+  @media (max-width: 935px) {
+    @content;
+  }
+}
+
+@mixin landscape-screen {
+  @media (max-height: 600px) {
     @content;
   }
 }

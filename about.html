@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/fontawesome_css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>My Portfolio | Contact</title>
+    <title>My Portfolio | About</title>
   </head>
   <body>
     <div class="wrapper">
@@ -26,13 +26,13 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="about.html" class="nav__link ">About</a>
+                <a href="about.html" class="nav__link active">About</a>
               </li>
               <li class="nav__item">
                 <a href="index.html" class="nav__link ">Projects</a>
               </li>
               <li class="nav__item">
-                <a href="contact.html" class="nav__link active">Contact</a>
+                <a href="contact.html" class="nav__link ">Contact</a>
               </li>
             </ul>
           </nav>
@@ -46,51 +46,29 @@
         </div>
       </header>
 
-      <!-- CONTACT セクション -->
-      <section class="contact page-grid-container">
+      <!-- ABOUT セクション -->
+      <section class="about page-grid-container">
         <div class="page-title">
-          <h2 class="page-title__title">Contact</h2>
+          <h2 class="page-title__title">About</h2>
         </div>
 
         <div class="divider"></div>
 
-        <div class="contact__info">
-          <div class="info mb-3">
-            <i class="fas fa-envelope"></i>
-            <h3>ryo_somatani@outlook.com</h3>
+        <div class="about__info">
+          <div class="about__info__img">
+            <img src="./img/about_pic.png" alt="" />
           </div>
 
-          <form action="POST" data-netlify="true">
-            <div class="form-group">
-              <input
-                type="email"
-                name="email"
-                class="contact__info__email"
-                placeholder="Email Address"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                name="message"
-                id="message"
-                class="contact__info__msg"
-                cols="20"
-                rows="5"
-                placeholder="Message.."
-                required
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <div
-                data-netlify-recaptcha="true"
-                class="contact__info__recaptcha"
-              ></div>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Send" class="contact__info__btn" />
-            </div>
-          </form>
+          <div class="about__info__content">
+            <p class="about__info__content__p">
+              カレッジのカリキュラムの一環でプログラミングを学修。Webのプログラミング（コーディング）への興味が湧き2018年初期よりHTML,
+              CSSを独学。その後Sass, Bootstrap, JavaScript,
+              jQueryと学習を進めて参りました。プロジェクトをご覧いただければこれらのスキルレベルのおおよその参考になるかと思います。
+              Git,
+              Githubを使用したバーション管理の基礎も最近学習いたしましてこちらのポートフォリオ、併せて各プロジェクトのコード等を記載しております。
+              今後はCMSはもちろんデザイン、JavaScriptフレームワーク、またコーディングスキルのみに限らずアクセシビリティ、ユーザビリティ、SEOといった知識も広げそれらを加味したWeb制作に努めて参りたいと考えております。実務経験を積みながら必要に応じ更に知識、スキルを益々深めていきたいと考えています。
+            </p>
+          </div>
         </div>
       </section>
     </div>
@@ -99,7 +77,7 @@
     <footer>
       <div class="container-80">
         <p class="footer__content copyright">
-          &copy; Ryo Somatani - Portfolio 2019
+          &copy; Ryo Somatani - Portfolio 2019.
         </p>
       </div>
     </footer>

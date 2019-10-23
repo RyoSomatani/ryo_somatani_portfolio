@@ -10,44 +10,51 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- HEADER SECTION -->
+      <!-- HEADER セクション -->
       <header id="page-top">
         <div class="container-80">
           <div class="title">
-            <h1><span class="color-highlight">My</span> Portfolio</h1>
-            <h2>Ryo Somatani</h2>
+            <h1 class="title__title-name">
+              <a href="index.html"
+                ><span class="color-highlight">My</span> Portfolio</a
+              >
+            </h1>
+            <h2 class="title__name">Ryo Somatani</h2>
           </div>
 
-          <nav>
-            <ul>
-              <li class="nav-item">
-                <a href="index.html" class="nav-link active">Projects</a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="about.html" class="nav__link ">About</a>
               </li>
-              <li class="nav-item">
-                <a href="contact.html" class="nav-link">Contact</a>
+              <li class="nav__item">
+                <a href="index.html" class="nav__link active">Projects</a>
+              </li>
+              <li class="nav__item">
+                <a href="contact.html" class="nav__link">Contact</a>
               </li>
             </ul>
           </nav>
 
-          <!-- HAMBURGER MENU FOR SMALL SCREENS -->
-          <div class="hamburger-menu">
-            <div class="hamburger-bar"></div>
-            <div class="hamburger-bar"></div>
-            <div class="hamburger-bar"></div>
+          <!-- 小スクリーン用ハンバーガーメニュー -->
+          <div class="hamburger">
+            <div class="hamburger__bar"></div>
+            <div class="hamburger__bar"></div>
+            <div class="hamburger__bar"></div>
           </div>
         </div>
       </header>
 
-      <div id="intro" class="container-80">
-        <p>
+      <div class="intro container-80">
+        <p class="intro__info">
           これらの作品には練習用サンプルサイトを参考にして見よう見まねで作成したものが含まれておりますが、元コードは一切見ず制作したものであるため自信を持って掲載させていただきました。サイトタイトル、個人名は当然変更しており、見た目と機能のアレンジも加えております。
           ポートフォリオページ自体は完全オリジナルのものでデザイン、動き含め全て自分で考案、制作したものです。
         </p>
 
-        <p id="github-link" class="mt-1">
+        <p class="github-link mt-1">
           <a
             href="https://github.com/RyoSomatani/ryo_somatani_portfolio"
-            id="site-url"
+            class="github-link__url"
             target="_blank"
             ><i class="fab fa-github"></i> Githubリンク</a
           >
@@ -55,14 +62,14 @@
         <p>(各作品のコード等載せております。)</p>
       </div>
 
-      <!-- PROJECTS SECTION -->
+      <!-- PROJECTS セクション -->
       <section class="projects mt-4">
         <div class="container-90">
           <!-- PROJECT 1 -->
           <div class="project" id="project-1">
             <a
               href="links/typing_game/index.html"
-              class="project-link"
+              class="project__link"
               target="_blank"
             >
               <div class="hover-overlay">
@@ -70,7 +77,7 @@
                   <i class="fas fa-search-plus"></i>
                 </div>
 
-                <div class="project-info">
+                <div class="project__info">
                   <h4>特徴</h4>
                   <ul>
                     <li>HTML, CSS, Sass, Bootstrap JavaScript</li>
@@ -89,7 +96,7 @@
           <div class="project" id="project-2">
             <a
               href="links/bookmarks_app/index.html"
-              class="project-link"
+              class="project__link"
               target="_blank"
             >
               <div class="hover-overlay">
@@ -97,7 +104,7 @@
                   <i class="fas fa-search-plus"></i>
                 </div>
 
-                <div class="project-info">
+                <div class="project__info">
                   <h4>特徴</h4>
                   <ul>
                     <li>HTML, CSS, jQuery</li>
@@ -116,7 +123,7 @@
           <div class="project" id="project-3">
             <a
               href="links/star_ratings/index.html"
-              class="project-link"
+              class="project__link"
               target="_blank"
             >
               <div class="hover-overlay">
@@ -124,7 +131,7 @@
                   <i class="fas fa-search-plus"></i>
                 </div>
 
-                <div class="project-info">
+                <div class="project__info">
                   <h4>特徴</h4>
                   <ul>
                     <li>HTML, CSS, Bootstrap, JavaScript</li>
@@ -144,7 +151,7 @@
           <div class="project" id="project-4">
             <a
               href="links/warble/index.html"
-              class="project-link"
+              class="project__link"
               target="_blank"
             >
               <div class="hover-overlay">
@@ -152,7 +159,7 @@
                   <i class="fas fa-search-plus"></i>
                 </div>
 
-                <div class="project-info">
+                <div class="project__info">
                   <h4>特徴</h4>
                   <ul>
                     <li>HTML, CSS, Sass, JavaScript</li>
@@ -171,7 +178,7 @@
           <div class="project" id="project-5">
             <a
               href="links/mobile_first_with_sass/index.html"
-              class="project-link"
+              class="project__link"
               target="_blank"
             >
               <div class="hover-overlay">
@@ -179,7 +186,7 @@
                   <i class="fas fa-search-plus"></i>
                 </div>
 
-                <div class="project-info">
+                <div class="project__info">
                   <h4>特徴</h4>
                   <ul>
                     <li>HTML, CSS, Sass, JavaScript</li>
@@ -198,7 +205,7 @@
           <div class="project" id="project-6">
             <a
               href="links/wentor/index.html"
-              class="project-link"
+              class="project__link"
               target="_blank"
             >
               <div class="hover-overlay">
@@ -206,7 +213,7 @@
                   <i class="fas fa-search-plus"></i>
                 </div>
 
-                <div class="project-info">
+                <div class="project__info">
                   <h4>特徴</h4>
                   <ul>
                     <li>HTML, CSS, Sass, JavaScript</li>
@@ -224,10 +231,12 @@
       </section>
     </div>
 
-    <!-- FOOTER SECTION -->
-    <footer>
+    <!-- FOOTER セクション -->
+    <footer class="footer">
       <div class="container-80">
-        <p class="copyright">&copy; Ryo Somatani - Portfolio 2019</p>
+        <p class="footer__content copyright">
+          &copy; Ryo Somatani - Portfolio 2019
+        </p>
         <div class="footer-icon-container">
           <a href="#page-top" class="back-to-top"
             ><i class="fas fa-angle-up"></i> Top</a
