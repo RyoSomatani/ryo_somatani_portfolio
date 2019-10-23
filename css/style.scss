@@ -16,10 +16,6 @@ body {
   @include box-shadow-2;
 }
 
-.active {
-  color: $color-3;
-}
-
 .color-highlight {
   color: $color-3;
 }
@@ -28,34 +24,30 @@ header {
   height: 100px;
 }
 
-section.contact {
-  height: calc(100vh - 100px - 80px - 2rem);
-}
-
 header .container-80 {
   padding-top: 1.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: space-between;
 
   .title {
-    h1,
-    h2 {
+    .title__title-name,
+    .title__name {
       font-weight: 500;
     }
   }
 
-  nav {
+  .nav {
     text-align: center;
     align-self: center;
 
-    ul {
+    .nav__list {
       display: flex;
       width: 60%;
       justify-content: space-between;
       margin: auto;
 
-      .nav-link {
+      .nav__link {
         padding-bottom: 1rem;
         transition: border 0.5s ease;
 
@@ -75,7 +67,8 @@ header .container-80 {
     }
   }
 
-  .hamburger-menu {
+  // ハンバーガーメニュー
+  .hamburger {
     height: 18px;
     width: 25px;
     display: flex;
@@ -87,10 +80,12 @@ header .container-80 {
     outline: none;
     z-index: 1;
     @include secondary-transition;
+
+    // クリックイベントで "X" に
     &.show {
       transform: rotate(360deg);
 
-      .hamburger-bar {
+      .hamburger__bar {
         &:first-child {
           transform: rotate(45deg) translate(5px, 5px);
         }
@@ -111,7 +106,7 @@ header .container-80 {
       right: 10px;
     }
 
-    .hamburger-bar {
+    .hamburger__bar {
       height: 3px;
       width: 100%;
       background: $color-2;
@@ -120,30 +115,108 @@ header .container-80 {
   }
 }
 
-#intro {
-  margin-top: 3rem;
-  font-size: 0.9rem;
+.page-grid-container {
+  display: grid;
+  grid-template-columns: 1.7fr 0.5fr 3fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+
+  .page-title {
+    margin-bottom: 5rem;
+
+    .page-title__title {
+      display: inline-block;
+      position: relative;
+
+      // ページタイトル下のバー
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: -10%;
+        width: 0;
+        height: 2px;
+        background: $color-3;
+        transition: all 0.4s ease;
+      }
+
+      &.show {
+        &::after {
+          width: 120%;
+        }
+      }
+    }
+  }
+
+  .divider {
+    width: 2px;
+    height: 50%;
+    background: $color-3;
+    transform: rotate(20deg);
+    justify-self: center;
+  }
 }
 
-#intro p:nth-child(3) {
+//=============================
+//======== ABOUT PAGE =========
+//=============================
+.about {
+  .about__info {
+    width: 70%;
+    margin: auto;
+    padding: 4rem 0;
+    text-align: left;
+    @include font-size-sm;
+    line-height: 2;
+
+    .about__info__img {
+      position: relative;
+      margin-bottom: 1.5rem;
+      img {
+        border-radius: 5px;
+      }
+
+      &::after {
+        content: "";
+        background: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//=============================
+//======= PROJECT PAGE ========
+//=============================
+.intro {
+  margin-top: 3rem;
+  @include font-size-sm;
+}
+
+.intro p:nth-child(3) {
   margin-top: 5px;
 }
 
-#github-link a {
-  text-decoration: underline;
-  color: $color-2;
-  font-size: 0.9rem;
+.github-link {
+  .github-link__url {
+    color: $color-3;
+    text-decoration: underline;
+    color: $color-2;
+    @include font-size-sm;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
 }
 
-#github-link i {
-  font-size: 1.5rem;
-}
-
-#site-url {
-  color: $color-3;
-}
-
-// PROJECT SECTION
 .projects {
   margin-top: 5rem;
   padding-bottom: 5rem;
@@ -201,7 +274,7 @@ header .container-80 {
         }
       }
 
-      .project-info {
+      .project__info {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -229,6 +302,7 @@ header .container-80 {
   }
 }
 
+// 各プロジェクト画像
 #project-1 {
   background: url("../img/1.png") no-repeat center center/cover;
 }
@@ -253,29 +327,11 @@ header .container-80 {
   background: url("../img/6.png") no-repeat center center/ cover;
 }
 
-// ========== CONTACT PAGE ==========
-// ==================================
+//=============================
+//======= CONTACT PAGE ========
+//=============================
 .contact {
-  display: grid;
-  grid-template-columns: 2fr 1fr 3fr;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 600px;
-  max-width: 1000px;
-  margin: auto;
-
-  .page-title {
-    margin-bottom: 5rem;
-  }
-
-  .divider {
-    width: 2px;
-    height: 50%;
-    background: $color-3;
-    transform: rotate(20deg);
-    justify-self: center;
-  }
+  padding: 10rem 0;
 
   i {
     font-size: 1.5rem;
@@ -285,7 +341,7 @@ header .container-80 {
 
   form {
     .form-group {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     input,
@@ -299,7 +355,7 @@ header .container-80 {
       border: 1px solid $gray-1;
     }
 
-    input[type="submit"] {
+    .contact__info__btn {
       background: $color-3;
       color: $color-1;
       cursor: pointer;
@@ -314,7 +370,7 @@ header .container-80 {
       }
     }
 
-    .recaptcha {
+    .contact__info__recaptcha {
       width: 300px;
       margin: auto;
     }
@@ -358,14 +414,18 @@ footer {
 //===================================
 
 // =====================
-// 920px 以下
+// 935px 以下
 // =====================
 @include lg-screen {
   header {
     .container-80 {
-      nav {
-        ul {
-          width: 80%;
+      .title {
+        .title__title-name {
+          font-size: 1.5rem;
+        }
+
+        .title__name {
+          font-size: 1.2rem;
         }
       }
     }
@@ -379,7 +439,7 @@ footer {
         min-width: 200px;
         min-height: 250px;
 
-        .project-info {
+        .project__info {
           height: 60%;
         }
       }
@@ -400,26 +460,16 @@ footer {
   header {
     .container-80 {
       grid-template-columns: 4fr 1fr 1fr;
-      .hamburger-menu {
+      .hamburger {
         visibility: visible;
       }
 
-      .title {
-        h1 {
-          font-size: 1.5rem;
-        }
-
-        h2 {
-          font-size: 1.2rem;
-        }
-      }
-
-      nav ul {
+      .nav__list {
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
-        width: 250px;
+        padding: 15rem 0;
         background: #333;
         z-index: 1;
         display: flex;
@@ -428,7 +478,7 @@ footer {
         transform: translateX(-100%);
         transition: transform 0.4s ease;
 
-        .nav-link {
+        .nav__link {
           color: $color-1;
           display: inline-block;
           padding: 0;
@@ -448,9 +498,20 @@ footer {
     }
   }
 
-  #intro {
+  .about {
+    .about__info {
+      padding: 0;
+
+      .about__info__img {
+        width: 80%;
+        margin: 0 auto 1rem auto;
+      }
+    }
+  }
+
+  .intro {
     margin-top: 1rem;
-    font-size: 0.8rem;
+    @include font-size-sm;
   }
 
   .projects {
@@ -467,7 +528,7 @@ footer {
           opacity: 1;
           background: rgba($color-1, 0.2);
 
-          .project-info {
+          .project__info {
             transform: none;
             height: 40%;
           }
@@ -477,6 +538,10 @@ footer {
   }
 
   .contact {
+    height: 100%;
+  }
+
+  .page-grid-container {
     grid-template-columns: 1fr;
     padding: 4rem 0;
 
@@ -496,7 +561,7 @@ footer {
       text-align: center;
       grid-gap: 1rem;
 
-      p {
+      .footer__content {
         order: 2;
       }
 
@@ -520,12 +585,22 @@ footer {
     .container-90 {
       .project {
         .hover-overlay {
-          .project-info {
+          .project__info {
             height: 50%;
           }
         }
       }
     }
+  }
+}
+
+// =====================
+// landscape画面
+// =====================
+@include landscape-screen {
+  .contact {
+    height: 100%;
+    padding: 5rem 0;
   }
 }
 
@@ -537,7 +612,7 @@ footer {
     -webkit-print-color-adjust: exact;
   }
 
-  #intro {
+  .intro {
     margin-top: 1.5rem;
   }
 
@@ -555,7 +630,7 @@ footer {
           display: none;
         }
 
-        .project-info {
+        .project__info {
           height: 50%;
           transform: none;
           bottom: -50%;

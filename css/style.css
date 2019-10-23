@@ -264,10 +264,6 @@ body {
           box-shadow: 0 2px 50px rgba(0, 0, 0, 0.3);
 }
 
-.active {
-  color: #009a9a;
-}
-
 .color-highlight {
   color: #009a9a;
 }
@@ -276,34 +272,30 @@ header {
   height: 100px;
 }
 
-section.contact {
-  height: calc(100vh - 100px - 80px - 2rem);
-}
-
 header .container-80 {
   padding-top: 1.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-header .container-80 .title h1,
-header .container-80 .title h2 {
+header .container-80 .title .title__title-name,
+header .container-80 .title .title__name {
   font-weight: 500;
 }
 
-header .container-80 nav {
+header .container-80 .nav {
   text-align: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-header .container-80 nav ul {
+header .container-80 .nav .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,26 +306,26 @@ header .container-80 nav ul {
   margin: auto;
 }
 
-header .container-80 nav ul .nav-link {
+header .container-80 .nav .nav__list .nav__link {
   padding-bottom: 1rem;
   -webkit-transition: border 0.5s ease;
   transition: border 0.5s ease;
 }
 
-header .container-80 nav ul .nav-link:hover, header .container-80 nav ul .nav-link:focus {
+header .container-80 .nav .nav__list .nav__link:hover, header .container-80 .nav .nav__list .nav__link:focus {
   color: #009a9a;
 }
 
-header .container-80 nav ul .nav-link.active {
+header .container-80 .nav .nav__list .nav__link.active {
   border-bottom: 2px solid #009a9a;
 }
 
-header .container-80 nav ul.show {
+header .container-80 .nav .nav__list.show {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-header .container-80 .hamburger-menu {
+header .container-80 .hamburger {
   height: 18px;
   width: 25px;
   display: -webkit-box;
@@ -355,32 +347,32 @@ header .container-80 .hamburger-menu {
   transition: all 0.3s ease;
 }
 
-header .container-80 .hamburger-menu.show {
+header .container-80 .hamburger.show {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-header .container-80 .hamburger-menu.show .hamburger-bar:first-child {
+header .container-80 .hamburger.show .hamburger__bar:first-child {
   -webkit-transform: rotate(45deg) translate(5px, 5px);
           transform: rotate(45deg) translate(5px, 5px);
 }
 
-header .container-80 .hamburger-menu.show .hamburger-bar:nth-child(2) {
+header .container-80 .hamburger.show .hamburger__bar:nth-child(2) {
   display: none;
 }
 
-header .container-80 .hamburger-menu.show .hamburger-bar:last-child {
+header .container-80 .hamburger.show .hamburger__bar:last-child {
   -webkit-transform: rotate(-45deg) translate(6px, -5px);
           transform: rotate(-45deg) translate(6px, -5px);
 }
 
-header .container-80 .hamburger-menu.move {
+header .container-80 .hamburger.move {
   position: fixed;
   top: 10px;
   right: 10px;
 }
 
-header .container-80 .hamburger-menu .hamburger-bar {
+header .container-80 .hamburger .hamburger__bar {
   height: 3px;
   width: 100%;
   background: #181818;
@@ -388,27 +380,103 @@ header .container-80 .hamburger-menu .hamburger-bar {
   transition: all 0.6s ease;
 }
 
-#intro {
-  margin-top: 3rem;
-  font-size: 0.9rem;
+.page-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.7fr 0.5fr 3fr;
+      grid-template-columns: 1.7fr 0.5fr 3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
 }
 
-#intro p:nth-child(3) {
+.page-grid-container .page-title {
+  margin-bottom: 5rem;
+}
+
+.page-grid-container .page-title .page-title__title {
+  display: inline-block;
+  position: relative;
+}
+
+.page-grid-container .page-title .page-title__title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -10%;
+  width: 0;
+  height: 2px;
+  background: #009a9a;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.page-grid-container .page-title .page-title__title.show::after {
+  width: 120%;
+}
+
+.page-grid-container .divider {
+  width: 2px;
+  height: 50%;
+  background: #009a9a;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.about .about__info {
+  width: 70%;
+  margin: auto;
+  padding: 4rem 0;
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 2;
+}
+
+.about .about__info .about__info__img {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.about .about__info .about__info__img img {
+  border-radius: 5px;
+}
+
+.about .about__info .about__info__img::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.intro {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+.intro p:nth-child(3) {
   margin-top: 5px;
 }
 
-#github-link a {
+.github-link .github-link__url {
+  color: #009a9a;
   text-decoration: underline;
   color: #181818;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
-#github-link i {
+.github-link .github-link__url i {
   font-size: 1.5rem;
-}
-
-#site-url {
-  color: #009a9a;
 }
 
 .projects {
@@ -481,7 +549,7 @@ header .container-80 .hamburger-menu .hamburger-bar {
   font-size: 1.6rem;
 }
 
-.projects .container-90 .hover-overlay .project-info {
+.projects .container-90 .hover-overlay .project__info {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,11 +575,11 @@ header .container-80 .hamburger-menu .hamburger-bar {
   transition: all 0.6s ease;
 }
 
-.projects .container-90 .hover-overlay .project-info h4 {
+.projects .container-90 .hover-overlay .project__info h4 {
   padding-bottom: 8px;
 }
 
-.projects .container-90 .hover-overlay .project-info.hovered {
+.projects .container-90 .hover-overlay .project__info.hovered {
   -webkit-transform: none;
           transform: none;
 }
@@ -541,34 +609,7 @@ header .container-80 .hamburger-menu .hamburger-bar {
 }
 
 .contact {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr 3fr;
-      grid-template-columns: 2fr 1fr 3fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  height: 600px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.contact .page-title {
-  margin-bottom: 5rem;
-}
-
-.contact .divider {
-  width: 2px;
-  height: 50%;
-  background: #009a9a;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -ms-grid-column-align: center;
-      justify-self: center;
+  padding: 10rem 0;
 }
 
 .contact i {
@@ -578,7 +619,7 @@ header .container-80 .hamburger-menu .hamburger-bar {
 }
 
 .contact form .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .contact form input,
@@ -592,7 +633,7 @@ header .container-80 .hamburger-menu .hamburger-bar {
   border: 1px solid #333;
 }
 
-.contact form input[type="submit"] {
+.contact form .contact__info__btn {
   background: #009a9a;
   color: #fff;
   cursor: pointer;
@@ -601,13 +642,13 @@ header .container-80 .hamburger-menu .hamburger-bar {
   transition: all 0.4s ease;
 }
 
-.contact form input[type="submit"]:hover, .contact form input[type="submit"]:focus {
+.contact form .contact__info__btn:hover, .contact form .contact__info__btn:focus {
   background: #fff;
   color: #009a9a;
   border: 1px solid #009a9a;
 }
 
-.contact form .recaptcha {
+.contact form .contact__info__recaptcha {
   width: 300px;
   margin: auto;
 }
@@ -653,9 +694,12 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   color: #fff;
 }
 
-@media (max-width: 920px) {
-  header .container-80 nav ul {
-    width: 80%;
+@media (max-width: 935px) {
+  header .container-80 .title .title__title-name {
+    font-size: 1.5rem;
+  }
+  header .container-80 .title .title__name {
+    font-size: 1.2rem;
   }
   .projects .container-90 {
     width: 90%;
@@ -664,7 +708,7 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     min-width: 200px;
     min-height: 250px;
   }
-  .projects .container-90 .project .project-info {
+  .projects .container-90 .project .project__info {
     height: 60%;
   }
 }
@@ -680,21 +724,15 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     -ms-grid-columns: 4fr 1fr 1fr;
         grid-template-columns: 4fr 1fr 1fr;
   }
-  header .container-80 .hamburger-menu {
+  header .container-80 .hamburger {
     visibility: visible;
   }
-  header .container-80 .title h1 {
-    font-size: 1.5rem;
-  }
-  header .container-80 .title h2 {
-    font-size: 1.2rem;
-  }
-  header .container-80 nav ul {
+  header .container-80 .nav__list {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    padding: 15rem 0;
     background: #333;
     z-index: 1;
     display: -webkit-box;
@@ -714,22 +752,29 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     transition: transform 0.4s ease;
     transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   }
-  header .container-80 nav ul .nav-link {
+  header .container-80 .nav__list .nav__link {
     color: #fff;
     display: inline-block;
     padding: 0;
     margin-bottom: 2rem;
     font-size: 1.2rem;
   }
-  header .container-80 nav ul .nav-link:hover, header .container-80 nav ul .nav-link:focus {
+  header .container-80 .nav__list .nav__link:hover, header .container-80 .nav__list .nav__link:focus {
     color: #009a9a;
   }
-  header .container-80 nav ul .nav-link.active {
+  header .container-80 .nav__list .nav__link.active {
     border: none;
   }
-  #intro {
+  .about .about__info {
+    padding: 0;
+  }
+  .about .about__info .about__info__img {
+    width: 80%;
+    margin: 0 auto 1rem auto;
+  }
+  .intro {
     margin-top: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   .projects {
     margin-top: 2rem;
@@ -747,17 +792,20 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     opacity: 1;
     background: rgba(255, 255, 255, 0.2);
   }
-  .projects .container-90 .project .hover-overlay .project-info {
+  .projects .container-90 .project .hover-overlay .project__info {
     -webkit-transform: none;
             transform: none;
     height: 40%;
   }
   .contact {
+    height: 100%;
+  }
+  .page-grid-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding: 4rem 0;
   }
-  .contact .divider {
+  .page-grid-container .divider {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
     height: 400%;
@@ -774,7 +822,7 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
     text-align: center;
     grid-gap: 1rem;
   }
-  footer .container-80 p {
+  footer .container-80 .footer__content {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -792,8 +840,15 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
 }
 
 @media (max-width: 425px) {
-  .projects .container-90 .project .hover-overlay .project-info {
+  .projects .container-90 .project .hover-overlay .project__info {
     height: 50%;
+  }
+}
+
+@media (max-height: 600px) {
+  .contact {
+    height: 100%;
+    padding: 5rem 0;
   }
 }
 
@@ -801,7 +856,7 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   * {
     -webkit-print-color-adjust: exact;
   }
-  #intro {
+  .intro {
     margin-top: 1.5rem;
   }
   .projects {
@@ -819,7 +874,7 @@ footer .container-80 .footer-icon-container .back-to-top:hover {
   .projects .project .hover-overlay .project-icon-container {
     display: none;
   }
-  .projects .project .hover-overlay .project-info {
+  .projects .project .hover-overlay .project__info {
     height: 50%;
     -webkit-transform: none;
             transform: none;
