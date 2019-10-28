@@ -28,7 +28,7 @@ const main = document.querySelector("main");
 
 main.addEventListener("scroll", () => {
   const sectionTitles = document.querySelectorAll(".section-header h1");
-  const feedbackComments = document.querySelectorAll(".example");
+  const feedbackComments = document.querySelectorAll(".feedback__example");
 
   sectionTitles.forEach(title => {
     const titlePosition = title.getBoundingClientRect().top;
