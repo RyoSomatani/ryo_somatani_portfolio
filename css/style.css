@@ -445,6 +445,7 @@ header .container-80 .hamburger .hamburger__bar {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin: 0 auto 1.5rem auto;
   width: 80%;
 =======
@@ -457,6 +458,10 @@ header .container-80 .hamburger .hamburger__bar {
 =======
   margin-bottom: 1.5rem;
 >>>>>>> 78d574f... about page added
+=======
+  margin: 0 auto 1.5rem auto;
+  width: 80%;
+>>>>>>> b7ff811... about page editted
 }
 
 .about .about__info .about__info__img img {
@@ -464,6 +469,7 @@ header .container-80 .hamburger .hamburger__bar {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 =======
@@ -474,6 +480,10 @@ header .container-80 .hamburger .hamburger__bar {
 >>>>>>> b7ff811... about page editted
 =======
 >>>>>>> 78d574f... about page added
+=======
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+>>>>>>> b7ff811... about page editted
 }
 
 .about .about__info .about__info__img::after {
@@ -481,6 +491,7 @@ header .container-80 .hamburger .hamburger__bar {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   background: rgba(255, 255, 255, 0.1);
 >>>>>>> 78d574f... about page added
@@ -489,6 +500,8 @@ header .container-80 .hamburger .hamburger__bar {
 =======
   background: rgba(255, 255, 255, 0.1);
 >>>>>>> 78d574f... about page added
+=======
+>>>>>>> b7ff811... about page editted
   position: absolute;
   top: 0;
   right: 0;
