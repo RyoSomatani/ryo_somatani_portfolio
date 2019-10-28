@@ -174,15 +174,25 @@ header .container-80 {
 
     .about__info__img {
       position: relative;
+<<<<<<< HEAD
       margin: 0 auto 1.5rem auto;
       width: 80%;
       img {
         border-radius: 5px;
         @include box-shadow-1;
+=======
+      margin-bottom: 1.5rem;
+      img {
+        border-radius: 5px;
+>>>>>>> 78d574f... about page added
       }
 
       &::after {
         content: "";
+<<<<<<< HEAD
+=======
+        background: rgba(255, 255, 255, 0.1);
+>>>>>>> 78d574f... about page added
         position: absolute;
         top: 0;
         right: 0;
