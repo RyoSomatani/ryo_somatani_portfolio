@@ -176,6 +176,7 @@ header .container-80 {
       position: relative;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       margin: 0 auto 1.5rem auto;
       width: 80%;
       img {
@@ -193,10 +194,16 @@ header .container-80 {
         border-radius: 5px;
         @include box-shadow-1;
 >>>>>>> b7ff811... about page editted
+=======
+      margin-bottom: 1.5rem;
+      img {
+        border-radius: 5px;
+>>>>>>> 78d574f... about page added
       }
 
       &::after {
         content: "";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -204,6 +211,9 @@ header .container-80 {
 >>>>>>> 78d574f... about page added
 =======
 >>>>>>> b7ff811... about page editted
+=======
+        background: rgba(255, 255, 255, 0.1);
+>>>>>>> 78d574f... about page added
         position: absolute;
         top: 0;
         right: 0;
