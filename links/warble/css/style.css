@@ -410,14 +410,7 @@ body {
 
 .navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item .navbar__nav-link:hover:after, .navbar .container-90 .navbar__nav .navbar__ul .navbar__nav-item .navbar__nav-link:focus:after {
   content: "";
-  height: 2px;
   width: 100%;
-  position: absolute;
-  background: #228896;
-  bottom: -2px;
-  left: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .navbar .container-90 footer .footer__content {
@@ -674,7 +667,6 @@ main {
   display: inline-block;
   background: #228896;
   color: #fff;
-  padding: 1rem 3rem;
 }
 
 #contact .contact__form .form-btn-container #form-btn:hover {

@@ -1,4 +1,5 @@
-//====== HAMBURGER MENU アニメーション =====
+//=======================================
+//===== HAMBURGER MENU アニメーション =====
 //=======================================
 const hamburger = document.querySelector(".hamburger-menu");
 const hamburgerBar = document.querySelectorAll(".hamburger-bar");
@@ -31,7 +32,7 @@ main.addEventListener("scroll", () => {
     .querySelector("#showcase")
     .getBoundingClientRect().bottom;
 
-  hamburgerColorControl(showcasePosition);
+  hamburgerColorControl();
 });
 
 // hamburger アイコンの色をコントロール
@@ -66,6 +67,7 @@ function hamburgerColorControl() {
   }
 }
 
+//===============================
 //====== SHOWCASE ANIMATION =====
 //===============================
 
@@ -79,7 +81,7 @@ window.addEventListener("DOMContentLoaded", insertText);
 function insertText() {
   currentShowcaseText.innerHTML = showCaseText1;
 
-  replaceText();
+  setTimeout(showContent, 600);
 }
 
 // 一定時間でテキストを入れ替える
@@ -107,7 +109,7 @@ function hideContent() {
     .querySelector(".showcase__animation-container")
     .classList.remove("show");
 
-  setTimeout(replaceText, 700);
+  setTimeout(replaceText, 600);
 }
 
 // SERVICES CARDS ANIMATION

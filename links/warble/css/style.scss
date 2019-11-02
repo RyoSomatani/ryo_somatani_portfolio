@@ -59,13 +59,7 @@ body {
             &:hover:after,
             &:focus:after {
               content: "";
-              height: 2px;
               width: 100%;
-              position: absolute;
-              background: $color-2;
-              bottom: -2px;
-              left: 0;
-              @include primary-transition;
             }
           }
         }
@@ -308,7 +302,6 @@ main {
         display: inline-block;
         background: $color-2;
         color: $white;
-        padding: 1rem 3rem;
 
         &:hover {
           background: $white;

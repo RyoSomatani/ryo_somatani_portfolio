@@ -19,13 +19,20 @@ body {
   z-index: 2;
 }
 
+header {
+  transform: translate(0, 0);
+  width: 90%;
+  margin: auto;
+  background: orange;
+  z-index: 1;
+}
+
 header #branding {
   position: fixed;
   top: 0;
   height: 55px;
   width: 90%;
   z-index: 2;
-  transform: translateX(5%);
   display: flex;
 
   .branding__heading {
@@ -38,9 +45,8 @@ header #branding {
   position: fixed;
   top: 0;
   right: 0;
-  width: 90%;
   height: 55px;
-  z-index: 3;
+  z-index: 2;
   transform: translatex(-5%);
 }
 
@@ -114,11 +120,16 @@ main {
   width: 100%;
   overflow: hidden scroll;
   height: calc(100vh - 55px);
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .section-header {
   text-align: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
 
   .section-header__heading {
     margin-bottom: 2rem;
@@ -219,7 +230,7 @@ main {
   .feature__box {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 2rem;
 
     .feature__box__heading {
@@ -230,6 +241,12 @@ main {
       margin-right: 2rem;
       font-size: 2.5rem;
       color: $color-2;
+      text-align: center;
+      flex: 1;
+    }
+
+    .feature {
+      flex: 3;
     }
   }
 }
@@ -332,6 +349,10 @@ main {
 #workshops {
   text-align: center;
   margin-bottom: 5rem;
+
+  .workshops__p {
+    margin: 2rem 0;
+  }
 
   .grid-container {
     .workshops__card {
@@ -589,20 +610,13 @@ footer {
       visibility: hidden;
     }
 
-    #branding {
-      left: 50%;
-      max-width: 1000px;
-      transform: translateX(-50%);
-    }
-
     nav {
       top: 0;
-      right: 50%;
+      right: 0;
       z-index: 2;
       width: 100%;
-      max-width: 1000px;
       height: 55px;
-      transform: translate(50%, 0);
+      transform: none;
       background: transparent;
       border: none;
       display: flex;
@@ -613,7 +627,8 @@ footer {
         grid-template-columns: repeat(6, auto);
         align-items: center;
         margin: 0;
-        max-width: 80%;
+        width: 75%;
+        max-width: 100%;
 
         .nav__nav-item {
           text-align: right;
@@ -762,7 +777,17 @@ footer {
   }
 }
 
-@media (max-height: 320px) {
+@media (min-width: 1200px) {
+  header {
+    nav {
+      ul.nav__nav-list {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-height: 500px) {
   #showcase {
     .showcase__overlay {
       .contents {

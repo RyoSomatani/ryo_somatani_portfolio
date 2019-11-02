@@ -638,12 +638,12 @@ main {
 .team .members .member .member__info .member__info__btn {
   margin-top: 2rem;
   background: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .team .members .member .member__info .member__info__btn:hover, .team .members .member .member__info .member__info__btn:focus {
   background: #e6e6e6;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .works .works__all-works {
@@ -657,12 +657,12 @@ main {
 .works .works__all-works .works__all-works__work {
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .works .works__all-works .works__all-works__work:hover {
   opacity: 0.5;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .skills {

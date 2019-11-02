@@ -282,11 +282,11 @@ main {
         .member__info__btn {
           margin-top: 2rem;
           background: $white;
+          @include primary-transition;
 
           &:hover,
           &:focus {
             background: darken($white, 10%);
-            @include primary-transition;
           }
         }
       }
@@ -302,10 +302,10 @@ main {
 
     .works__all-works__work {
       @include box-shadow-1;
+      @include primary-transition;
 
       &:hover {
         opacity: 0.5;
-        @include primary-transition;
       }
     }
   }

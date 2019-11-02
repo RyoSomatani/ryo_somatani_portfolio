@@ -51,33 +51,33 @@ function getRanking() {
   for (let brand in ratings) {
     arrySort.push([brand, ratings[brand]]);
     arrySort.sort((a, b) => {
-      return a[1] - b[1];
+      return b[1] - a[1];
     });
   }
 
   rankingTable.innerHTML = `
   <tr>
     <td>1</td>
-    <td>${arrySort[3][0]}</td>
-    <td>${arrySort[3][1]}</td>
+    <td>${arrySort[0][0]}</td>
+    <td>${arrySort[0][1]}</td>
   </tr>
 
   <tr>
     <td>2</td>
-    <td>${arrySort[2][0]}</td>
-    <td>${arrySort[2][1]}</td>
-  </tr>
-
-  <tr>
-    <td>3</td>
     <td>${arrySort[1][0]}</td>
     <td>${arrySort[1][1]}</td>
   </tr>
 
   <tr>
+    <td>3</td>
+    <td>${arrySort[2][0]}</td>
+    <td>${arrySort[2][1]}</td>
+  </tr>
+
+  <tr>
     <td>4</td>
-    <td>${arrySort[0][0]}</td>
-    <td>${arrySort[0][1]}</td>
+    <td>${arrySort[3][0]}</td>
+    <td>${arrySort[3][1]}</td>
   </tr>
  `;
 }
