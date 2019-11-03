@@ -39,7 +39,7 @@ main.addEventListener("scroll", () => {
   });
 
   feedbackComments.forEach(comment => {
-    commentPosition = comment.getBoundingClientRect().top;
+    const commentPosition = comment.getBoundingClientRect().top;
 
     if (commentPosition < window.innerHeight * 0.7) {
       comment.classList.add("show");

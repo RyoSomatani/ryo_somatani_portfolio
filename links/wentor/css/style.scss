@@ -1,5 +1,5 @@
 @import "config";
-@import "common";
+@import "global";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -8,6 +8,10 @@ body {
   line-height: 1.5;
   height: 100%;
   width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .blank-navbar {
@@ -20,7 +24,9 @@ body {
 }
 
 header {
+  // headerの子要素をheaderに相対的に位置させるため
   transform: translate(0, 0);
+
   width: 90%;
   margin: auto;
   background: orange;
@@ -121,10 +127,6 @@ main {
   overflow: hidden scroll;
   height: calc(100vh - 55px);
   z-index: -1;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .section-header {
