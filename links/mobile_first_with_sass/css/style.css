@@ -469,6 +469,7 @@ main {
   margin-top: 80px;
   overflow-x: hidden;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .showcase {

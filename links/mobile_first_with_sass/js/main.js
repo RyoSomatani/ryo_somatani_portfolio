@@ -22,7 +22,7 @@ function hamburgerAnimation() {
 // =====タイプライターアニメーション=====
 // =================================
 const showcaseHeading = document.querySelector("#auto-type");
-const text = "sass and javascript";
+const text = "sass and javaScript";
 let index = 0;
 
 function autoType() {
