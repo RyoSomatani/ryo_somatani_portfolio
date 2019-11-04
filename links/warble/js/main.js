@@ -28,10 +28,6 @@ function hamburgerAnimation() {
 
 // hamburger アイコンの色をshowcaseセクション以下で変更
 main.addEventListener("scroll", () => {
-  const showcasePosition = document
-    .querySelector("#showcase")
-    .getBoundingClientRect().bottom;
-
   hamburgerColorControl();
 });
 
@@ -71,7 +67,7 @@ function hamburgerColorControl() {
 //====== SHOWCASE ANIMATION =====
 //===============================
 
-const showCaseText1 = "Intuitive is How Give We the User New Superpowers";
+const showCaseText1 = "Intuitive is How We Give the User New Superpowers";
 const showCaseText2 = "We are Happy to Create Newest Modern Websites";
 const currentShowcaseText = document.querySelector("#showcase-text");
 

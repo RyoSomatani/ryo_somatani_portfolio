@@ -3,10 +3,10 @@ const updateBtn = document.querySelector("#update-btn");
 
 // 初期評価
 const ratings = {
-  sony: 4.0,
-  samsung: 4.0,
+  sony: 5.0,
+  samsung: 4.5,
   panasonic: 4.0,
-  lg: 4.0
+  lg: 3.5
 };
 
 document.addEventListener("DOMContentLoaded", putStars);
